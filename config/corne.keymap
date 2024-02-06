@@ -285,16 +285,27 @@
 
 };
 
-/{
-        combos {
-                compatible = "zmk,combo";
-                combo_game: combo_game {
-                        timeout-ms = <50>;
-                        key-position = <38 41>;
-                        bindings = <&mo 5>;
-                };
+/ {
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+        };
+        combo_gamelayer {
+                timeout-ms = <50>;
+                key-positions = <37 40>;
+                bindings = <&tog 4>;
+        };
+        combp_caps {
+                timeout-ms = <50>;
+                key-positions = <12 13>;
+                bindings = <&kp LCAPS>;
+        };
         }
-}
+    };
+};
 
 /*
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
@@ -328,12 +339,12 @@
                         bindings = <&kp LALT> <&kp LGUI> ;
                 };
 
-                td_sc: tap_dance_shift_caps {
-                        compatible = "zmk,behavior-tap-dance";
-                        #binding-cells = <0>;
-                        tapping-term-ms = <200>;
-                        bindings = <&kp LSHFT> <&kp LCAPS> ;
-                };
+                // td_sc: tap_dance_shift_caps {
+                //         compatible = "zmk,behavior-tap-dance";
+                //         #binding-cells = <0>;
+                //         tapping-term-ms = <200>;
+                //         bindings = <&kp LSHFT> <&kp LCAPS> ;
+                // };
 
                 td_pm: tap_dance_plus_minus {
                         compatible = "zmk,behavior-tap-dance";
@@ -431,7 +442,7 @@
                         display-name = "Base";
                         bindings = <
    &mt ESC TAB  &kp Q         &kp W &mt m_alt_e E &kp R &kp T                 &kp Y   &td_u  &kp I     &td_o   &kp P     &kp DEL
-   &td_sc       &mt m_alt_a A &kp S &kp D         &kp F &kp G                 &kp H   &kp J  &kp K     &kp L   &kp SQT   &kp BSPC
+   &kp LSHFT       &mt m_alt_a A &kp S &kp D         &kp F &kp G                 &kp H   &kp J  &kp K     &kp L   &kp SQT   &kp BSPC
    &kp LCTRL    &kp Z         &kp X &kp C         &kp V &kp B                 &kp N   &kp M  &kp COMMA &kp DOT &kp MINUS &kp DQT
                                     &td_ag        &mo 1 &kp SPACE             &kp RET &mo 2  &kp RALT
                         >;
