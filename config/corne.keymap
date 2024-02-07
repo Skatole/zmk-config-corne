@@ -518,7 +518,7 @@
                         display-name = "CSALLAP";
                         bindings = <
    &kp TAB   &kp Q     &kp W &e_ht 0 E  &kp R &kp T                 &kp Z   &td_u  &i_ht 0 I  &td_o    &kp P      &kp BSPC
-   &kp LSHFT &a_ht 0 A &kp S &kp D      &kp F &kp G                 &kp H   &kp J  &kp K      &kp L    &SDQT_ht   &kp LSHIFT
+   &kp LSHFT &a_ht 0 A &kp S &kp D      &kp F &kp G                 &kp H   &kp J  &kp K      &kp L    &SDQT_ht   &kp LSHFT
    &kp LCTRL &kp Y     &kp X &kp C      &kp V &kp B                 &kp N   &kp M  &alt_COMMA &alt_DOT &alt_MINUS &kp LALT
                              &td_ag     &mo 1 &kp SPACE             &kp RET &mo 2  &kp RALT
                         >;
