@@ -301,28 +301,28 @@
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings = <&macro_press &kp LALT>, 
-                                <&macro_tap &kp KP4 &kp KP6>, 
+                                <&macro_tap &kp KP_N4 &kp KP_N6>, 
                                 <&macro_release &kp LALT>;
                 };
                 alt_MINUS: alt_MINUS {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings = <&macro_press &kp LALT>, 
-                                <&macro_tap &kp KP4 &kp KP5>, 
+                                <&macro_tap &kp KP_N4 &kp KP_N5>, 
                                 <&macro_release &kp LALT>;
                 };
                 alt_DQT: alt_DQT {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings = <&macro_press &kp LALT>, 
-                                <&macro_tap &kp KP3 &kp KP4>, 
+                                <&macro_tap &kp KP_N3 &kp KP_N4>, 
                                 <&macro_release &kp LALT>;
                 };
                 alt_SQT: alt_SQT {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings = <&macro_press &kp LALT>, 
-                                <&macro_tap &kp KP3 &kp KP9>, 
+                                <&macro_tap &kp KP_N3 &kp KP_N9>, 
                                 <&macro_release &kp LALT>;
                 };
         };
