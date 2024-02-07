@@ -515,11 +515,11 @@
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-//yuiohjkl"
+//FFDD
                         display-name = "CSALLAP";
                         bindings = <
    &kp TAB   &kp Q     &kp W &e_ht 0 E  &kp R &kp T                 &kp Y   &td_u  &i_ht 0 I  &td_o    &kp P      &kp BSPC
-   &kp LSHFT &a_ht 0 A &kp S &kp D      &kp F &kp G                 &kp H   &kp J  &kp K      &kp L    &SDQT_ht   &kp RSHFT
+   &kp LSHFT &a_ht 0 A &kp S &kp D      &kp F &kp G                 &kp H   &kp J  &kp K      &kp L    &SDQT_ht   &kp RIGHT_SHIFT
    &kp LCTRL &kp Z     &kp X &kp C      &kp V &kp B                 &kp N   &kp M  &alt_COMMA &alt_DOT &alt_MINUS &kp LALT
                              &td_ag     &mo 1 &kp SPACE             &kp RET &mo 2  &kp RALT
                         >;
