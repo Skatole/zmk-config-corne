@@ -294,7 +294,7 @@
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings = <&macro_press &kp LALT>, 
-                                <&macro_tap &kp KP_N4 &kp KP4>, 
+                                <&macro_tap &kp KP_N4 &kp KP_N4>, 
                                 <&macro_release &kp LALT>;
                 };
                 alt_DOT: alt_DOT {
