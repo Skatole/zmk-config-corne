@@ -265,7 +265,7 @@
                 key-positions = <37 40>;
                 bindings = <&tog 4>;
         };
-        combp_caps {
+        combo_caps {
                 timeout-ms = <50>;
                 key-positions = <12 13>;
                 bindings = <&kp LCAPS>;
@@ -284,38 +284,101 @@
 / {
         behaviors {
 
-                //TapDance for: á
-                td_a: tap_dance_a {
-                        compatible = "zmk,behavior-tap-dance";
-                        #binding-cells = <0>;
-                        tapping-term-ms = <200>;
-                        bindings = <&mt m_alt_a A>;
+                a_ht: a_hold_tap {
+                        compatible = "zmk,behavior-hold-tap";
+                        #binding-cells = <2>;
+                        tapping-term-ms = <150>;
+                        quick-tap-ms = <0>;
+                        flavor = "tap-preferred";
+                        bindings = <&m_alt_a>, <&kp>;
                 };
 
-                //TapDance for: é
-
-                td_e: tap_dance_e {
-                        compatible = "zmk,behavior-tap-dance";
-                        #binding-cells = <0>;
-                        tapping-term-ms = <200>;
-                        bindings = <&mt m_alt_e E>;
+                e_ht: e_hold_tap {
+                        compatible = "zmk,behavior-hold-tap";
+                        #binding-cells = <2>;
+                        tapping-term-ms = <150>;
+                        quick-tap-ms = <0>;
+                        flavor = "tap-preferred";
+                        bindings = <&m_alt_e>, <&kp>;
                 };
 
-                //TapDance for: í
-
-                td_i: tap_dance_i {
-                        compatible = "zmk,behavior-tap-dance";
-                        #binding-cells = <0>;
-                        tapping-term-ms = <200>;
-                        bindings = <&mt m_alt_i I>;
+                i_ht: i_hold_tap {
+                        compatible = "zmk,behavior-hold-tap";
+                        #binding-cells = <2>;
+                        tapping-term-ms = <150>;
+                        quick-tap-ms = <0>;
+                        flavor = "tap-preferred";
+                        bindings = <&m_alt_i>, <&kp>;
                 };
+
+                o_1_ht: o_1_hold_tap {
+                        compatible = "zmk,behavior-hold-tap";
+                        #binding-cells = <2>;
+                        tapping-term-ms = <150>;
+                        quick-tap-ms = <0>;
+                        flavor = "tap-preferred";
+                        bindings = <&m_alt_1_o>, <&kp>;
+                };
+
+                o_2_ht: o_2_hold_tap {
+                        compatible = "zmk,behavior-hold-tap";
+                        #binding-cells = <2>;
+                        tapping-term-ms = <150>;
+                        quick-tap-ms = <0>;
+                        flavor = "tap-preferred";
+                        bindings = <&m_alt_3_o>, <&m_alt_2_o>;
+                };
+
+                u_1_ht: u_1_hold_tap {
+                        compatible = "zmk,behavior-hold-tap";
+                        #binding-cells = <2>;
+                        tapping-term-ms = <150>;
+                        quick-tap-ms = <0>;
+                        flavor = "tap-preferred";
+                        bindings = <&m_alt_1_u>, <&kp>;
+                };
+
+                u_2_ht: u_2_hold_tap {
+                        compatible = "zmk,behavior-hold-tap";
+                        #binding-cells = <2>;
+                        tapping-term-ms = <150>;
+                        quick-tap-ms = <0>;
+                        flavor = "tap-preferred";
+                        bindings = <&m_alt_3_u>, <&m_alt_2_u>;
+                };
+
+                // //TapDance for: á
+                // td_a: tap_dance_a {
+                //         compatible = "zmk,behavior-tap-dance";
+                //         #binding-cells = <0>;
+                //         tapping-term-ms = <200>;
+                //         bindings = <&mt m_alt_a A>;
+                // };
+
+                // //TapDance for: é
+
+                // td_e: tap_dance_e {
+                //         compatible = "zmk,behavior-tap-dance";
+                //         #binding-cells = <0>;
+                //         tapping-term-ms = <200>;
+                //         bindings = <&mt m_alt_e E>;
+                // };
+
+                // //TapDance for: í
+
+                // td_i: tap_dance_i {
+                //         compatible = "zmk,behavior-tap-dance";
+                //         #binding-cells = <0>;
+                //         tapping-term-ms = <200>;
+                //         bindings = <&mt m_alt_i I>;
+                // };
 
                 //TapDance for: o ó ö ő
                 td_o: tap_dance_o {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
-                        bindings = <&mt m_alt_1_o O> <&mt m_alt_3_o m_alt_2_o> ;
+                        bindings = <&o_1_ht 0 O> <&o_2_ht 0 0> ;
                 };
 
                 //TapDance for: u ú ü ű
@@ -323,7 +386,7 @@
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
-                        bindings = <&mt m_alt_1_u U> <&mt m_alt_3_u m_alt_2_u> ;
+                        bindings = <&u_1_ht 0 U> <&u_2_ht 0 0> ;
                 };
 
                 td_ag: tap_dance_alt_gui {
@@ -428,8 +491,8 @@
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         display-name = "Base";
                         bindings = <
-   &mt ESC TAB  &kp Q &kp W &td_e  &kp R &kp T                 &kp Y   &td_u  &td_i     &td_o   &kp P     &kp DEL
-   &kp LSHFT    &td_a &kp S &kp D  &kp F &kp G                 &kp H   &kp J  &kp K     &kp L   &kp SQT   &kp BSPC
+   &mt ESC TAB  &kp Q &kp W &e_ht 0 E  &kp R &kp T                 &kp Y   &td_u  &i_ht 0 I     &td_o   &kp P     &kp DEL
+   &kp LSHFT    &a_ht 0 A &kp S &kp D  &kp F &kp G                 &kp H   &kp J  &kp K     &kp L   &kp SQT   &kp BSPC
    &kp LCTRL    &kp Z &kp X &kp C  &kp V &kp B                 &kp N   &kp M  &kp COMMA &kp DOT &kp MINUS &kp DQT
                             &td_ag &mo 1 &kp SPACE             &kp RET &mo 2  &kp RALT
                         >;
