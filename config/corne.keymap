@@ -763,7 +763,7 @@
         mod_left: mod_left {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = < 0>;
-            bindings = <&kp L>, <&kp LEFT>;
+            bindings = <&kp S>, <&kp LEFT>;
             mods = <(MOD_LGUI | MOD_LALT | MOD_RGUI | MOD_RSFT | MOD_LCTL)>;
             keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_LALT)>;
 
