@@ -623,13 +623,7 @@
 //                 keep - mods = <(MOD_RSFT | MOD_LGUI | MOD_RGUI | MOD_LCTRL)>;
 //         };
 
-bspc_del: backspace_delete {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp DELETE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_RSFT)>;
-        };
+
 
 bspc_del: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
