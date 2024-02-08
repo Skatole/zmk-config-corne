@@ -686,63 +686,54 @@
             #binding-cells = <0>;
             bindings = <&m_alt_a>, <&m_alt_CAPSA>;
             mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
         };
         mod_e: mod_e {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&m_alt_e>, <&m_alt_CAPSE>;
             mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
         };
         mod_i: mod_i {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&m_alt_i>, <&m_alt_CAPSI>;
             mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
         };
         mod_o_1: mod_o_1 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&m_alt_1_o>, <&m_alt_1_CAPSO>;
             mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
         };
         mod_o_2: mod_o_2 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&m_alt_2_o>, <&m_alt_2_CAPSO>;
             mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
         };
         mod_o_3: mod_o_3 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&m_alt_3_o>, <&m_alt_3_CAPSO>;
             mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
         };
         mod_u_1: mod_u_1 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&m_alt_1_u>, <&m_alt_1_CAPSU>;
             mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
         };
         mod_u_2: mod_u_2 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&m_alt_2_u>, <&m_alt_2_CAPSU>;
             mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
         };
         mod_u_3: mod_u_3 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&m_alt_3_u>, <&m_alt_3_CAPSU>;
             mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
         };
 
 
@@ -804,7 +795,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+            bindings = <&mod_a>, <&kp>;
         };
 
         e_ht: e_hold_tap {
@@ -1027,7 +1018,7 @@
             display-name = "CSALLAP";
             bindings = <
 &kp TAB    &kp Q      &kp W  &e_ht 0 E  &kp R      &kp T        &kp Y    &td_u  &i_ht 0 I   &td_o     &kp P       &kp BSPC
-&td_cshift  &a_ht APOS A  &mod_left  &mod_down     &mod_right      &kp G        &kp H    &kp J  &kp K       &kp L     &td_sdqt    &kp LSHFT
+&td_cshift  &a_ht 0 A  &mod_left  &mod_down     &mod_right      &kp G        &kp H    &kp J  &kp K       &kp L     &td_sdqt    &kp LSHFT
 &td_cshift  &kp Z      &kp X  &td_ctrl_c &td_ctrl_v &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp LALT
                              &td_ag     &mo 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
             >;
