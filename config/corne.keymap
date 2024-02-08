@@ -59,7 +59,8 @@
                 <&macro_release>,
                 <&kp LALT>;
         };
-        m_alt_A: m_alt_A {
+
+        m_alt_CAPSA: m_alt_CAPSA {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
