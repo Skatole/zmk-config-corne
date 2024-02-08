@@ -614,6 +614,16 @@
         //     bindings = <&alt_DQT>, <&alt_SQT>;
         // };
 
+        apos_ht: apos_ht {
+                compatible = "zmk,behavior-hold-tap";
+                #binding-cells = <2>;
+                tapping-term-ms = <150>;
+                quick-tap-ms = <0>;
+                flavor = "tap-preferred";
+                bindings = <&alt_GRAVE>, <&alt_SQT>;
+                };
+        }
+
         //TAP DANCE
         //TapDance for: o ó ö ő
 
@@ -720,7 +730,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
-            bindings = <&alt_SQT>, <&alt_DQT>;
+            bindings = <&apos_ht 0 0>, <&alt_DQT>;
         };
         //CTRL_C + V tapD
         td_ctrl_c: tap_dance_ctrl_c {
@@ -746,14 +756,14 @@
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
             // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |&a_ht 0 A  &e_ht 0 E &SDQT_ht  &i_ht 0 I &td_u &td_o
-            //<>>><><>uuú+úúúüüú++úuúü+
+            //<>>><><>uuú+úúúüüú++úuúü+uúüűiíoooól'"'"JK&|!<>~#@$`@$$``<`'"$$"$'@`$`$`$$``$`$>^*+++-===+++-()][{}\/%&|!&|!&|!<`$ll~#!>],./'#][-==-/-./-..,,]
             
 
             display-name = "CSALLAP";
             bindings = <
 &kp TAB    &kp Q      &kp W  &e_ht 0 E  &kp R      &kp T        &kp Y    &td_u  &i_ht 0 I   &td_o     &kp P       &kp BSPC
 &kp LSHFT  &a_ht 0 A  &kp S  &kp D      &kp F      &kp G        &kp H    &kp J  &kp K       &kp L     &td_sdqt    &kp LSHFT
-&kp LCTRL  &kp Z      &kp X  &td_ctrl_c &td_ctrl_v &kp B        &kp N    &kp M  &alt_COMMA  &alt_DOT  &alt_MINUS  &kp LALT
+&kp LCTRL  &kp Z      &kp X  &td_ctrl_c &td_ctrl_v &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp LALT
                              &td_ag     &mo 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
             >;
         };
