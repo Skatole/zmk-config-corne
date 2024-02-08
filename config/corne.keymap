@@ -709,14 +709,17 @@
         mod_o_2: mod_o_2 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&m_alt_2_o>, <&m_alt_2_CAPSO>;
+            bindings = <&m_alt_2_o>, <&kp N0>;
             mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
         };
         mod_o_3: mod_o_3 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&m_alt_3_o>, <&m_alt_3_CAPSO>;
+            bindings = <&kp LEFT_BRACKET>, <&kp LEFT_BRACKET>;
             mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
+
         };
         mod_u_1: mod_u_1 {
             compatible = "zmk,behavior-mod-morph";
@@ -727,14 +730,16 @@
         mod_u_2: mod_u_2 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&m_alt_2_u>, <&m_alt_2_CAPSU>;
+            bindings = <&m_alt_2_u>, <&kp MINUS>;
             mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
         };
         mod_u_3: mod_u_3 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&m_alt_3_u>, <&m_alt_3_CAPSU>;
+            bindings = <&kp NON_US_HASH>, <&kp NON_US_HASH>;
             mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
         };
 
 
@@ -1014,7 +1019,7 @@
             // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
             
-            //qwertzuiopúűűűűUüüüaúűúuUsdfdsSDFFíIj
+            //qwertzuiopúűűűűUüüüaúűúuUsdfdsSDFFíIjoöóQqüüU
 
             display-name = "CSALLAP";
             bindings = <
