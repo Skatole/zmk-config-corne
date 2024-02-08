@@ -630,7 +630,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&u_1_ht 0 U>, <&u_2_ht HASH 0>;
+            bindings = <&u_1_ht 0 U>, <&u_2_ht BSLH 0>;
         };
 
         td_ag: tap_dance_alt_gui {
@@ -746,11 +746,12 @@
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
             // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |&a_ht 0 A  &e_ht 0 E &SDQT_ht  &i_ht 0 I &td_u &td_o
+            //<>>><><>uuú+úúúüüú++úuúü+
             
 
             display-name = "CSALLAP";
             bindings = <
-&kp TAB    &kp Q      &kp W  &e_ht 0 E  &kp R      &kp T        &kp Y    &td_u  &td_o       &i_ht 0 I &kp P       &kp BSPC
+&kp TAB    &kp Q      &kp W  &e_ht 0 E  &kp R      &kp T        &kp Y    &td_u  &i_ht 0 I   &td_o     &kp P       &kp BSPC
 &kp LSHFT  &a_ht 0 A  &kp S  &kp D      &kp F      &kp G        &kp H    &kp J  &kp K       &kp L     &td_sdqt    &kp LSHFT
 &kp LCTRL  &kp Z      &kp X  &td_ctrl_c &td_ctrl_v &kp B        &kp N    &kp M  &alt_COMMA  &alt_DOT  &alt_MINUS  &kp LALT
                              &td_ag     &mo 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
