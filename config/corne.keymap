@@ -771,10 +771,10 @@
 
         mod_right: mod_right {
             compatible = "zmk,behavior-mod-morph";
-            #binding-cells = < 0>;
+            #binding-cells = <0>;
             bindings = <&kp R>, <&kp RIGHT>;
-            mods = <(MOD_LGUI | MOD_LALT | MOD_RGUI | MOD_RSFT | MOD_LCTL)>;
-            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_LALT)>;
+            mods = <(MOD_LGUI | MOD_LALT | MOD_RGUI | MOD_RSFT)>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT)>;
 
         };
 
@@ -1023,9 +1023,9 @@
 
             display-name = "CSALLAP";
             bindings = <
-&kp TAB    &kp Q      &kp W  &e_ht 0 E  &kp R      &kp T        &kp Y    &td_u  &i_ht 0 I   &td_o     &kp P       &kp BSPC
-&kp LSHFT  &a_ht 0 A  &mod_left  &mod_down     &mod_right      &kp G        &kp H    &kp J  &kp K       &kp L     &td_sdqt    &kp LSHFT
-&td_cshift  &kp Z      &kp X  &td_ctrl_c &td_ctrl_v &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp LALT
+&kp TAB    &kp Q      &kp W     &e_ht 0 E  &kp R      &kp T        &kp Y    &td_u  &i_ht 0 I   &td_o     &kp P       &kp BSPC
+&kp LSHFT  &a_ht 0 A  &mod_left &mod_down  &mod_right &kp G        &kp H    &kp J  &kp K       &kp L     &td_sdqt    &kp LSHFT
+&td_cshift &kp Z      &kp X     &td_ctrl_c &td_ctrl_v &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp LALT
                              &td_ag     &mo 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
             >;
         };
@@ -1050,9 +1050,9 @@
 
             display-name = "KIS CICA";
             bindings = <
-&trans  &alt_CARET  &alt_ASTERIX  &td_pm      &alt_LPAR   &alt_RPAR     &alt_AMPS  &alt_EXCL     &alt_TILDE  &alt_HASH  &none    &trans
-&trans  &none       &none         &alt_EQUAL  &atl_LSQBR  &atl_RSQBR    &td_ltgt  &td_ltgt  &alt_GRAVE  &alt_DLLR  &alt_AT  &trans
-&trans  &alt_PRCNT  &alt_BSLH     &alt_FSLH   &alt_LCRLY  &alt_RCRLY    &alt_PIPE  &none     &none       &none      &none    &trans
+&trans  &alt_CARET  &alt_ASTERIX  &td_pm      &alt_LPAR   &alt_RPAR     &alt_AMPS  &alt_EXCL &alt_TILDE  &alt_HASH  &none    &trans
+&trans  &none       &none         &alt_EQUAL  &atl_LSQBR  &atl_RSQBR    &td_ltgt   &alt_QESTN  &alt  &alt_DLLR  &alt_AT  &trans
+&trans  &alt_PRCNT  &alt_FSLH     &alt_BSLH   &alt_LCRLY  &alt_RCRLY    &alt_PIPE  &none     &none       &none      &none    &trans
                                   &trans      &trans      &trans        &trans     &trans    &trans
             >;
         };
