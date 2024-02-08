@@ -3,6 +3,10 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
+&caps_word {
+    continue-list = <MOD_LALT>;
+};
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -29,7 +33,7 @@
         combo_caps {
             timeout-ms = <50>;
             key-positions = <12 13>;
-            bindings = <&kp LCAPS>;
+            bindings = <&caps_word>;
         };
 
         combo_del {
@@ -486,6 +490,53 @@
                 <&macro_release>,
                 <&kp LALT>;
         };
+        alt_lthn: alt_lthn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N6 &kp KP_N0>,
+                <&macro_release>,
+                <&kp LALT>;
+        };
+        alt_gthn: alt_gthn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N6 &kp KP_N2>,
+                <&macro_release>,
+                <&kp LALT>;
+        };
+
+        //CTRL C+V
+        ctrl_c: ctrl_c {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings =
+                        <&macro_press>,
+                        <&kp LCTRL>,
+                        <&macro_tap>,
+                        <&kp C>,
+                        <&macro_release>,
+                        <&kp LCTRL>;
+        };
+
+        ctrl_v: ctrl_v {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings =
+                        <&macro_press>,
+                        <&kp LCTRL>,
+                        <&macro_tap>,
+                        <&kp V>,
+                        <&macro_release>,
+                        <&kp LCTRL>;
+        };
     };
 
     behaviours {
@@ -533,7 +584,7 @@
             tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&m_alt_3_o>, <&m_alt_2_o>;
+            bindings = <&kp LBKT>, <&m_alt_2_o>;
         };
 
         u_1_ht: u_1_hold_tap {
@@ -551,7 +602,7 @@
             tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&m_alt_3_u>, <&m_alt_2_u>;
+            bindings = <&kp HASH>, <&m_alt_2_u>;
         };
 
         // SDQT_ht: SDQT_hold_tap {
@@ -600,7 +651,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LT>, <&kp GT>;
+            bindings = <&alt_lt>, <&alt_gt>;
         };
 
         td_n1f1: tap_dance_n1_f1 {
@@ -671,6 +722,19 @@
             tapping-term-ms = <250>;
             bindings = <&alt_SQT>, <&alt_DQT>;
         };
+        //CTRL_C + V tapD
+        td_ctrl_c: tap_dance_ctrl_c {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp C>, <&ctrl_c>;
+        };
+        td_ctrl_v: tap_dance_ctrl_v {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp V>, <&ctrl_V>;
+        };
     };
 
     keymap {
@@ -682,13 +746,13 @@
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
             // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |&a_ht 0 A  &e_ht 0 E &SDQT_ht  &i_ht 0 I &td_u &td_o
-            //L'''''''''''''''''''''''"''"'''''"'''''''
+            
 
             display-name = "CSALLAP";
             bindings = <
-&kp TAB    &kp Q      &kp W  &e_ht 0 E  &kp R  &kp T        &kp Y    &td_u  &i_ht 0 I   &td_o     &kp P       &kp BSPC
-&kp LSHFT  &a_ht 0 A  &kp S  &kp D      &kp F  &kp G        &kp H    &kp J  &kp K       &kp L     &td_sdqt    &kp LSHFT
-&kp LCTRL  &kp Z      &kp X  &kp C      &kp V  &kp B        &kp N    &kp M  &alt_COMMA  &alt_DOT  &alt_MINUS  &kp LALT
+&kp TAB    &kp Q      &kp W  &e_ht 0 E  &kp R      &kp T        &kp Y    &td_u  &td_o       &i_ht 0 I &kp P       &kp BSPC
+&kp LSHFT  &a_ht 0 A  &kp S  &kp D      &kp F      &kp G        &kp H    &kp J  &kp K       &kp L     &td_sdqt    &kp LSHFT
+&kp LCTRL  &kp Z      &kp X  &td_ctrl_c &td_ctrl_v &kp B        &kp N    &kp M  &alt_COMMA  &alt_DOT  &alt_MINUS  &kp LALT
                              &td_ag     &mo 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
             >;
         };
@@ -709,6 +773,7 @@
             // | CTRL |     |      |  =  |  [  |  ]  |        |  |  |  <>  |  `   |   $  |  @  |     |
             // | SHFT |  %  |  /  |  \  |  {  |  }  |        |  !  |      |      |      |     |     |
             //                    | GUI |     | SPC |        | ENT |     | ALT |
+            //`<<<>>>`$$@@$@`@$`@$`>||!!$$@$`??|!???-.,,.-,.-,.-,.-?:_
 
             display-name = "KIS CICA";
             bindings = <
