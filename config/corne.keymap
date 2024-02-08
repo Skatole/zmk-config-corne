@@ -654,8 +654,8 @@
                 quick-tap-ms = <0>;
                 flavor = "tap-preferred";
                 bindings = <&alt_GRAVE>, <&alt_SQT>;
-                };
-        }
+        };
+        
 
         //TAP DANCE
         //TapDance for: o ó ö ő
