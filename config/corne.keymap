@@ -804,7 +804,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&mod_a>, <&kp>;
+            bindings = <&kp APOS>, <&kp>;
         };
 
         e_ht: e_hold_tap {
@@ -1008,7 +1008,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LSHFT>, <&kp LC(LSHFT)>;
+            bindings = <&kp LCTRL>, <&kp LC(LSHFT)>;
         };
     };
 
