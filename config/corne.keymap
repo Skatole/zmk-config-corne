@@ -817,13 +817,13 @@
             // | CTRL |     |      |  =  |  [  |  ]  |        |  <>  |  ?  |  _   |   $  |    |     |
             // | SHFT |  %  |  /  |  \  |  {  |  }  |        |  |  |      |     |   @    |     |     |
             //                    | GUI |     | SPC |        | ENT |     | ALT |
-            //`<<<>>>`$$@@$@`@$`@$`>||!!$$@$`??|!???-.,,.-,.-,.-,.-?:_
+            //
 
             display-name = "KIS CICA";
             bindings = <
 &trans  &alt_CARET  &alt_ASTERIX  &td_pm      &alt_LPAR   &alt_RPAR     &alt_AMPS  &alt_EXCL     &alt_TILDE  &alt_HASH  &none    &trans
 &trans  &none       &none         &alt_EQUAL  &atl_LSQBR  &atl_RSQBR    &td_ltgt  &td_ltgt  &alt_GRAVE  &alt_DLLR  &alt_AT  &trans
-&trans  &alt_PRCNT  &alt_BSLH     &alt_FSLH   &alt_LCRLY  &alt_RCRLY    &alt_PIPE  &none     &none       &none      &none    &none
+&trans  &alt_PRCNT  &alt_BSLH     &alt_FSLH   &alt_LCRLY  &alt_RCRLY    &alt_PIPE  &none     &none       &none      &none    &trans
                                   &trans      &trans      &trans        &trans     &trans    &trans
             >;
         };
@@ -834,12 +834,13 @@
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
             // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
+            
 
             display-name = "CSETTTINGZ";
             bindings = <
-&out OUT_TOG  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4    &none    &none   &none     &none  &none  &trans
+&out OUT_TOG  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4    &none    &none   &none     &none  &bt BT_CLR  &trans
 &out OUT_BLE  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &none    &none   &none     &none  &none  &trans
-&out OUT_USB  &none          &none          &none          &bt BT_PRV     &bt BT_NXT       &none    &none   &none     &none  &none  &bt BT_CLR
+&out OUT_USB  &none          &none          &none          &bt BT_PRV     &bt BT_NXT       &none    &none   &none     &none  &none  &trans
                                             &kp LGUI       &trans         &kp SPACE        &kp RET  &trans  &kp RALT
             >;
         };
@@ -853,10 +854,10 @@
 
             display-name = "(X^2)^2";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I       &kp O     &kp P       &kp DEL
-&kp LSHFT  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J  &kp K       &kp L     &td_sdqt   &kp LSHIFT
-&kp LCTRL  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &alt_COMMA  &alt_DOT  &alt_MINUS  &kp LALT
-                         &kp LALT  &mo 5  &kp SPACE    &kp RET  &mo 0  &kp RALT
+&trans    &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I       &kp O     &kp P       &trans
+&trans  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J  &kp K       &kp L     &td_sdqt   &trans
+&trans  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &alt_COMMA  &alt_DOT  &alt_MINUS  &trans
+                         &kp LALT  &mo 5  &kp SPACE    &kp RET  &trans  &kp RALT
             >;
         };
 
