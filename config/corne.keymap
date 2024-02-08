@@ -613,7 +613,7 @@
                 #binding-cells = < 0>;
                 bindings = <&kp L>, <&kp LEFT>;
                 mods = <(MOD_LGUI | MOD_LALT | MOD_RGUI | MOD_RSFT | MOD_LCTL)>;
-                keep - mods = <(MOD_RSFT | MOD_LGUI | MOD_RGUI | MOD_LCTL)>;
+                keep-mods = <(MOD_RSFT | MOD_LGUI | MOD_RGUI | MOD_LCTL)>;
         };
 
         mod_right: mod_right {
@@ -621,7 +621,7 @@
                 #binding-cells = < 0>;
                 bindings = <&kp R>, <&kp RIGHT>;
                 mods = <(MOD_LGUI | MOD_LALT | MOD_RGUI | MOD_RSFT | MOD_LCTL)>;
-                keep - mods = <(MOD_RSFT | MOD_LGUI | MOD_RGUI | MOD_LCTL)>;
+                keep-mods = <(MOD_RSFT | MOD_LGUI | MOD_RGUI | MOD_LCTL)>;
         };
 
 
