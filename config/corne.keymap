@@ -488,7 +488,7 @@
         };
     };
 
-    behaviors {
+    behaviours {
         //HOLD TAP
 
         a_ht: a_hold_tap {
