@@ -584,7 +584,7 @@
             tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&kp LBKT>, <&m_alt_2_o>;
+            bindings = <&kp>, <&m_alt_2_o>;
         };
 
         u_1_ht: u_1_hold_tap {
@@ -602,7 +602,7 @@
             tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&kp HASH>, <&m_alt_2_u>;
+            bindings = <&kp>, <&m_alt_2_u>;
         };
 
         // SDQT_ht: SDQT_hold_tap {
@@ -621,7 +621,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&o_1_ht 0 O>, <&o_2_ht 0 0>;
+            bindings = <&o_1_ht 0 O>, <&o_2_ht LBKT 0>;
         };
 
         //TapDance for: u ú ü ű
@@ -630,7 +630,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&u_1_ht 0 U>, <&u_2_ht 0 0>;
+            bindings = <&u_1_ht 0 U>, <&u_2_ht HASH 0>;
         };
 
         td_ag: tap_dance_alt_gui {
