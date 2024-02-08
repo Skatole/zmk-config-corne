@@ -367,7 +367,7 @@
                 <&kp LALT>;
         };
 
-        atl_LSQBR: atl_LSQBR {
+        alt_LSQBR: alt_LSQBR {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
