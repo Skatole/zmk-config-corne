@@ -583,13 +583,13 @@
 
     behaviours {
  // MOD MORPH:
-        mod_a: mod_a {
-                compatible = "zmk,behavior-mod-morph";
-                #binding-cells = <0>;
-                bindings = <&m_alt_a>, <&m_alt_A>;
-      mods = <(MOD_LGUI|MOD_LALT|MOD_RGUI|MOD_RSFT|MOD_LCTRL)>;
-                keep-mods = <(MOD_RSFT|MOD_LGUI|MOD_RGUI|MOD_LCTRL)>;
-        };
+//         mod_a: mod_a {
+//                 compatible = "zmk,behavior-mod-morph";
+//                 #binding-cells = <0>;
+//                 bindings = <&m_alt_a>, <&m_alt_A>;
+//       mods = <(MOD_LGUI|MOD_LALT|MOD_RGUI|MOD_RSFT|MOD_LCTRL)>;
+//                 keep-mods = <(MOD_RSFT|MOD_LGUI|MOD_RGUI|MOD_LCTRL)>;
+//         };
         mod_up: mod_up {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = < 0>;
