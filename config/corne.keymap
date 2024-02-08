@@ -804,7 +804,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&kp APOS>, <&kp>;
+            bindings = <&kp>, <&kp>;
         };
 
         e_ht: e_hold_tap {
@@ -1026,7 +1026,7 @@
 
             display-name = "CSALLAP";
             bindings = <
-&kp TAB    &kp Q      &kp W  &e_ht 0 E  &kp R      &kp T        &kp Y    &td_u  &i_ht 0 I   &td_o     &kp P       &kp BSPC
+&kp TAB    &kp Q      &kp W  &e_ht APOS E  &kp R      &kp T        &kp Y    &td_u  &i_ht 0 I   &td_o     &kp P       &kp BSPC
 &td_cshift  &a_ht 0 A  &mod_left  &mod_down     &mod_right      &kp G        &kp H    &kp J  &kp K       &kp L     &td_sdqt    &kp LSHFT
 &td_cshift  &kp Z      &kp X  &td_ctrl_c &td_ctrl_v &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp LALT
                              &td_ag     &mo 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
