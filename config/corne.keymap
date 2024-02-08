@@ -587,15 +587,15 @@
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
                 bindings = <&m_alt_a>, <&m_alt_A>;
-                mods = <(MOD_LGUI | MOD_LALT | MOD_RGUI | MOD_RSFT | MOD_LCTRL)>;
-                keep - mods = <(MOD_RSFT | MOD_LGUI | MOD_RGUI | MOD_LALT)>;
+      mods = <(MOD_LGUI|MOD_LALT|MOD_RGUI|MOD_RSFT|MOD_LCTRL)>;
+                keep-mods = <(MOD_RSFT|MOD_LGUI|MOD_RGUI|MOD_LCTRL)>;
         };
         mod_up: mod_up {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = < 0>;
                 bindings = <&kp E>, <&kp UP>;
-                mods = <(MOD_LGUI | MOD_LALT | MOD_RGUI | MOD_RSFT | MOD_LCTRL)>;
-                keep - mods = <(MOD_RSFT | MOD_LGUI | MOD_RGUI | MOD_LCTRL)>;
+                mods = <(MOD_LGUI|MOD_LALT|MOD_RGUI|MOD_RSFT|MOD_LCTRL)>;
+                keep-mods = <(MOD_RSFT|MOD_LGUI|MOD_RGUI|MOD_LCTRL)>;
         };
 
         mod_down: mod_down {
