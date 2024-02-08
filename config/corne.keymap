@@ -512,6 +512,39 @@
                 <&macro_release>,
                 <&kp LALT>;
         };
+        alt_QESTN: alt_QESTN {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N6 &kp KP_N3>,
+                <&macro_release>,
+                <&kp LALT>;
+        };
+        alt_COLON: alt_COLON {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N5 &kp KP_N8>,
+                <&macro_release>,
+                <&kp LALT>;
+        };
+        alt_USCR: alt_USCR {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N9 &kp KP_N5>,
+                <&macro_release>,
+                <&kp LALT>;
+        };
 
         //CTRL C+V
         ctrl_c: ctrl_c {
@@ -780,17 +813,17 @@
 
         bracket_layer {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |   ^  |   *  | -/+ |  (  |  )  |        |  &  |      |   ~  |  #  |     | DEl |
-            // | CTRL |     |      |  =  |  [  |  ]  |        |  |  |  <>  |  `   |   $  |  @  |     |
-            // | SHFT |  %  |  /  |  \  |  {  |  }  |        |  !  |      |      |      |     |     |
+            // |  TAB |   ^  |   *  | -/+ |  (  |  )  |        |  &  |    !  |   :  |  #  |     | DEl |
+            // | CTRL |     |      |  =  |  [  |  ]  |        |  <>  |  ?  |  _   |   $  |    |     |
+            // | SHFT |  %  |  /  |  \  |  {  |  }  |        |  |  |      |     |   @    |     |     |
             //                    | GUI |     | SPC |        | ENT |     | ALT |
             //`<<<>>>`$$@@$@`@$`@$`>||!!$$@$`??|!???-.,,.-,.-,.-,.-?:_
 
             display-name = "KIS CICA";
             bindings = <
-&trans  &alt_CARET  &alt_ASTERIX  &td_pm      &alt_LPAR   &alt_RPAR     &alt_AMPS  &none     &alt_TILDE  &alt_HASH  &none    &trans
-&trans  &none       &none         &alt_EQUAL  &atl_LSQBR  &atl_RSQBR    &alt_PIPE  &td_ltgt  &alt_GRAVE  &alt_DLLR  &alt_AT  &trans
-&trans  &alt_PRCNT  &alt_BSLH     &alt_FSLH   &alt_LCRLY  &alt_RCRLY    &alt_EXCL  &none     &none       &none      &none    &none
+&trans  &alt_CARET  &alt_ASTERIX  &td_pm      &alt_LPAR   &alt_RPAR     &alt_AMPS  &alt_EXCL     &alt_TILDE  &alt_HASH  &none    &trans
+&trans  &none       &none         &alt_EQUAL  &atl_LSQBR  &atl_RSQBR    &td_ltgt  &td_ltgt  &alt_GRAVE  &alt_DLLR  &alt_AT  &trans
+&trans  &alt_PRCNT  &alt_BSLH     &alt_FSLH   &alt_LCRLY  &alt_RCRLY    &alt_PIPE  &none     &none       &none      &none    &none
                                   &trans      &trans      &trans        &trans     &trans    &trans
             >;
         };
