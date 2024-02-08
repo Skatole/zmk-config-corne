@@ -143,6 +143,7 @@
                 <&macro_release>,
                 <&kp LALT>;
         };
+        
 
           m_alt_2_o: m_alt_2_o {
             compatible = "zmk,behavior-macro";
@@ -164,7 +165,7 @@
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N4>,
+                <&kp KP_N0 &kp KP_N1 &kp KP_N5 &kp KP_N3>,
                 <&macro_release>,
                 <&kp LALT>;
         };
@@ -176,7 +177,7 @@
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp KP_N3 &kp KP_N3 &kp KP_N7>,
+                <&kp KP_N0 &kp KP_N3 &kp KP_N3 &kp KP_N7>,
                 <&macro_release>,
                 <&kp LALT>;
         };
@@ -228,7 +229,7 @@
                 <&macro_release>,
                 <&kp LALT>;
         };
-
+        
         m_alt_2_CAPSU: m_alt_2_CAPSU {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -236,7 +237,7 @@
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N0>,
+                <&kp KP_N0 &kp KP_N1 &kp KP_N5 &kp KP_N4>,
                 <&macro_release>,
                 <&kp LALT>;
         };
@@ -248,7 +249,7 @@
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp KP_N3 &kp KP_N6 &kp KP_N9>,
+                <&kp KP_N0 &kp KP_N3 &kp KP_N6 &kp KP_N9>,
                 <&macro_release>,
                 <&kp LALT>;
         };
@@ -1013,12 +1014,12 @@
             // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
             
-            //qwertzuiopúűűűűUüüüaúűúuUsdfdsSDFFíI
+            //qwertzuiopúűűűűUüüüaúűúuUsdfdsSDFFíIj
 
             display-name = "CSALLAP";
             bindings = <
 &kp TAB    &kp Q      &kp W  &e_ht 0 E  &kp R      &kp T        &kp Y    &td_u  &i_ht 0 I   &td_o     &kp P       &kp BSPC
-&td_cshift  &a_ht 0 A  &mod_left  &mod_down     &mod_right      &kp G        &kp H    &kp J  &kp K       &kp L     &td_sdqt    &kp LSHFT
+&kp LSHFT  &a_ht 0 A  &mod_left  &mod_down     &mod_right      &kp G        &kp H    &kp J  &kp K       &kp L     &td_sdqt    &kp LSHFT
 &td_cshift  &kp Z      &kp X  &td_ctrl_c &td_ctrl_v &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp LALT
                              &td_ag     &mo 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
             >;
