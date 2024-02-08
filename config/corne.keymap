@@ -647,7 +647,7 @@
             tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&m_alt_a>, <&kp>;
+            bindings = <&mod_a>, <&kp>;
         };
 
         e_ht: e_hold_tap {
