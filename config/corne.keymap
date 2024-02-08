@@ -788,9 +788,9 @@
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
             // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |&a_ht 0 A  &e_ht 0 E &SDQT_ht  &i_ht 0 I &td_u &td_o
-            //<>>><><>uuú+úúúüüú++úuúü+uúüűiíoooól'"'"JK&|!<>~#@$`@$$``<`'"$$"$'@`$`$`$$``$`$>^*+++-===+++-()][{}\/%&|!&|!&|!<`$ll~#!>],./'#][-==-/-./-..,,]
+            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
             
+            //qwertzuiopúűűűűUüüüaúűúuUsdfdsSDFFíI
 
             display-name = "CSALLAP";
             bindings = <
@@ -806,7 +806,7 @@
             bindings = <
 &trans  &none  &none          &mt PG_UP UP    &none          &none     &kp KP_N0  &td_n1f1  &td_n2f2   &td_n3f3   &kp F4   &trans
 &trans  &none  &mt HOME LEFT  &mt PG_DN DOWN  &mt END RIGHT  &none     &none      &td_n4f5  &td_n5f6   &td_n6f7   &kp F8   &trans
-&trans  &none  &none          &none           &none          &none     &none      &td_n7f9  &td_n8f10  &td_n9f11  &kp F12  &none
+&trans  &none  &none          &none           &none          &none     &none      &td_n7f9  &td_n8f10  &td_n9f11  &kp F12  &trans
                               &trans          &trans         &trans    &trans     &trans    &trans
             >;
         };
