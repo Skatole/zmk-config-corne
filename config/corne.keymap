@@ -588,22 +588,22 @@
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
                 bindings = <&m_alt_a>, <&m_alt_CAPSA>;
-                mods = <(MOD_LGUI|MOD_LALT|MOD_RGUI|MOD_RSFT|MOD_LCTRL)>;
-                keep-mods = <(MOD_RSFT|MOD_LGUI|MOD_RGUI|MOD_LCTRL)>;
+                mods = <(MOD_LGUI|MOD_LALT|MOD_RGUI|MOD_RSFT|MOD_LCTL)>;
+                keep-mods = <(MOD_RSFT|MOD_LGUI|MOD_RGUI|MOD_LCTL)>;
         };
         mod_up: mod_up {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = < 0>;
                 bindings = <&kp E>, <&kp UP>;
-                mods = <(MOD_LGUI|MOD_LALT|MOD_RGUI|MOD_RSFT|MOD_LCTRL)>;
-                keep-mods = <(MOD_RSFT|MOD_LGUI|MOD_RGUI|MOD_LCTRL)>;
+                mods = <(MOD_LGUI|MOD_LALT|MOD_RGUI|MOD_RSFT|MOD_LCTL)>;
+                keep-mods = <(MOD_RSFT|MOD_LGUI|MOD_RGUI|MOD_LCTL)>;
         };
 
         mod_down: mod_down {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = < 0>;
                 bindings = <&kp D>, <&kp DOWN>;
-              mods = <(MOD_LGUI | MOD_LALT | MOD_RGUI | MOD_RSFT | MOD_LCTRL)>;
+              mods = <(MOD_LGUI | MOD_LALT | MOD_RGUI | MOD_RSFT | MOD_LCTL)>;
                 keep - mods = <(MOD_RSFT | MOD_LGUI | MOD_RGUI | MOD_LCTRL)>;
         };
         
@@ -612,16 +612,16 @@
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = < 0>;
                 bindings = <&kp L>, <&kp LEFT>;
-                mods = <(MOD_LGUI | MOD_LALT | MOD_RGUI | MOD_RSFT | MOD_LCTRL)>;
-                keep - mods = <(MOD_RSFT | MOD_LGUI | MOD_RGUI | MOD_LCTRL)>;
+                mods = <(MOD_LGUI | MOD_LALT | MOD_RGUI | MOD_RSFT | MOD_LCTL)>;
+                keep - mods = <(MOD_RSFT | MOD_LGUI | MOD_RGUI | MOD_LCTL)>;
         };
 
         mod_right: mod_right {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = < 0>;
                 bindings = <&kp R>, <&kp RIGHT>;
-                mods = <(MOD_LGUI | MOD_LALT | MOD_RGUI | MOD_RSFT | MOD_LCTRL)>;
-                keep - mods = <(MOD_RSFT | MOD_LGUI | MOD_RGUI | MOD_LCTRL)>;
+                mods = <(MOD_LGUI | MOD_LALT | MOD_RGUI | MOD_RSFT | MOD_LCTL)>;
+                keep - mods = <(MOD_RSFT | MOD_LGUI | MOD_RGUI | MOD_LCTL)>;
         };
 
 
