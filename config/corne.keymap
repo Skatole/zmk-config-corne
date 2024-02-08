@@ -3,11 +3,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
-&caps_word {
-    continue-list = <MOD_LALT>;
-};
 
 / {
+
     combos {
         compatible = "zmk,combos";
 
@@ -61,7 +59,18 @@
                 <&macro_release>,
                 <&kp LALT>;
         };
-
+        m_alt_A: m_alt_A {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N3>,
+                <&macro_release>,
+                <&kp LALT>;
+        };
+        
         m_alt_e: m_alt_e {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -573,7 +582,51 @@
     };
 
     behaviours {
-        //HOLD TAP
+ // MOD MORPH:
+        mod_a: mod_a {
+                compatible = "zmk,behavior-mod-morph";
+                #binding-cells = <0>;
+                bindings = <&m_alt_a>, <&m_alt_A>;
+                mods = <(MOD_LGUI | MOD_LALT | MOD_RGUI | MOD_RSFT | MOD_LCTRL)>;
+                keep - mods = <(MOD_RSFT | MOD_LGUI | MOD_RGUI | MOD_LALT)>;
+        };
+        mod_up: mod_up {
+                compatible = "zmk,behavior-mod-morph";
+                #binding-cells = < 0>;
+                bindings = <&kp E>, <&kp UP>;
+                mods = <(MOD_LGUI | MOD_LALT | MOD_RGUI | MOD_RSFT | MOD_LCTRL)>;
+                keep - mods = <(MOD_RSFT | MOD_LGUI | MOD_RGUI | MOD_LCTRL)>;
+        };
+
+        mod_down: mod_down {
+                compatible = "zmk,behavior-mod-morph";
+                #binding-cells = < 0>;
+                bindings = <&kp D>, <&kp DOWN>;
+              mods = <(MOD_LGUI | MOD_LALT | MOD_RGUI | MOD_RSFT | MOD_LCTRL)>;
+                keep - mods = <(MOD_RSFT | MOD_LGUI | MOD_RGUI | MOD_LCTRL)>;
+        };
+        
+
+        mod_left: mod_left {
+                compatible = "zmk,behavior-mod-morph";
+                #binding-cells = < 0>;
+                bindings = <&kp L>, <&kp LEFT>;
+                mods = <(MOD_LGUI | MOD_LALT | MOD_RGUI | MOD_RSFT | MOD_LCTRL)>;
+                keep - mods = <(MOD_RSFT | MOD_LGUI | MOD_RGUI | MOD_LCTRL)>;
+        };
+
+        mod_right: mod_right {
+                compatible = "zmk,behavior-mod-morph";
+                #binding-cells = < 0>;
+                bindings = <&kp R>, <&kp RIGHT>;
+                mods = <(MOD_LGUI | MOD_LALT | MOD_RGUI | MOD_RSFT | MOD_LCTRL)>;
+                keep - mods = <(MOD_RSFT | MOD_LGUI | MOD_RGUI | MOD_LCTRL)>;
+        };
+
+
+                
+
+ // HOLD TAP
 
         a_ht: a_hold_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -778,6 +831,13 @@
             tapping-term-ms = <200>;
             bindings = <&kp V>, <&ctrl_v>;
         };
+
+        td_cshift: tap_dance_cshift {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LSHFT>, <&kp LC(LSHFT)>;
+        };
     };
 
     keymap {
@@ -795,7 +855,7 @@
             display-name = "CSALLAP";
             bindings = <
 &kp TAB    &kp Q      &kp W  &e_ht 0 E  &kp R      &kp T        &kp Y    &td_u  &i_ht 0 I   &td_o     &kp P       &kp BSPC
-&kp LSHFT  &a_ht 0 A  &kp S  &kp D      &kp F      &kp G        &kp H    &kp J  &kp K       &kp L     &td_sdqt    &kp LSHFT
+&td_cshift  &a_ht 0 A  &kp S  &kp D      &kp F      &kp G        &kp H    &kp J  &kp K       &kp L     &td_sdqt    &kp LSHFT
 &kp LCTRL  &kp Z      &kp X  &td_ctrl_c &td_ctrl_v &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp LALT
                              &td_ag     &mo 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
             >;
@@ -856,7 +916,7 @@
             display-name = "(X^2)^2";
             bindings = <
 &trans    &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I       &kp O     &kp P       &trans
-&trans  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J  &kp K       &kp L     &td_sdqt   &trans
+&kp LSHFT  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J  &kp K       &kp L     &td_sdqt   &trans
 &trans  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH   &trans
                          &kp LALT  &mo 5  &kp SPACE    &kp RET  &trans  &kp RALT
             >;
