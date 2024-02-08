@@ -759,16 +759,16 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = < 0>;
             bindings = <&kp E>, <&kp UP>;
-            mods = <(MOD_LGUI|MOD_LALT|MOD_RGUI|MOD_LCTL)>;
-            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_LALT)>;
+            mods = <(MOD_LGUI|MOD_LALT|MOD_RGUI)>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT)>;
         };
 
         mod_down: mod_down {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = < 0>;
             bindings = <&kp D>, <&kp DOWN>;
-            mods = <(MOD_LGUI | MOD_LALT | MOD_RGUI | MOD_LCTL)>;
-            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_LALT)>;
+            mods = <(MOD_LGUI | MOD_LALT | MOD_RGUI )>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT)>;
         };
         
 
@@ -776,8 +776,8 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = < 0>;
             bindings = <&kp S>, <&kp LEFT>;
-            mods = <(MOD_LGUI | MOD_LALT | MOD_RGUI | MOD_RSFT | MOD_LCTL)>;
-            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_LALT)>;
+            mods = <(MOD_LGUI | MOD_LALT | MOD_RGUI | MOD_RSFT )>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT)>;
 
         };
 
