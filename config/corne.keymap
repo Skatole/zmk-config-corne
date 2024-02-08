@@ -603,8 +603,8 @@
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = < 0>;
                 bindings = <&kp D>, <&kp DOWN>;
-              mods = <(MOD_LGUI | MOD_LALT | MOD_RGUI | MOD_RSFT | MOD_LCTL)>;
-                keep - mods = <(MOD_RSFT | MOD_LGUI | MOD_RGUI | MOD_LCTRL)>;
+                mods = <(MOD_LGUI | MOD_LALT | MOD_RGUI | MOD_RSFT | MOD_LCTL)>;
+                keep-mods = <(MOD_RSFT | MOD_LGUI | MOD_RGUI | MOD_LCTL)>;
         };
         
 
