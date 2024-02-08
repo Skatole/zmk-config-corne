@@ -668,7 +668,7 @@
         td_sdqt: tap_dance_sdqt {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <250>;
             bindings = <&alt_SQT>, <&alt_DQT>;
         };
     };
@@ -682,7 +682,7 @@
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
             // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |&a_ht 0 A  &e_ht 0 E &SDQT_ht  &i_ht 0 I &td_u &td_o
-            //lwaAAwW"'
+            //L'''''''''''''''''''''''"''"'''''"'''''''
 
             display-name = "CSALLAP";
             bindings = <
