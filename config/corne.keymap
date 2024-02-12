@@ -1024,7 +1024,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mo 1>, <&mo 2> <&mo 3>;
+            bindings = <&mo 1>, <&mo 2>, <&mo 3>;
         };
         tp_lyr2: tap_dance_layer2 {
               compatible = "zmk,behavior-tap-dance";
