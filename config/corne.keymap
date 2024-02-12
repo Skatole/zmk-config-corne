@@ -1059,9 +1059,9 @@
         num_layer {
             display-name = "UTYULU-PUTYULU";
             bindings = <
-&trans  &kp KP_N0 &td_n1f1  &td_n2f2  &td_n3f3 &kp F4             &none  &none          &mt PG_UP UP    &none          &none  &trans
-&trans  &td_n4f5  &td_n5f6  &td_n6f7  &kp F8   &none              &none  &mt HOME LEFT  &mt PG_DN DOWN  &mt END RIGHT  &none  &trans
-&trans  &td_n7f9  &td_n8f10 &td_n9f11 &kp F12  &none              &none  &none          &none           &none          &none  &trans
+&trans  &kp KP_N0 &td_n1f1  &td_n2f2  &td_n3f3  &kp F4             &none  &none          &mt PG_UP UP    &none          &none  &trans
+&trans  &none     &td_n4f5  &td_n5f6  &td_n6f7  &kp F8             &none  &mt HOME LEFT  &mt PG_DN DOWN  &mt END RIGHT  &none  &trans
+&trans  &none     &td_n7f9  &td_n8f10 &td_n9f11 &kp F12            &none  &none          &none           &none          &none  &trans
                             &trans    &trans   &trans             &trans &trans         &trans
             >;
         };
@@ -1106,7 +1106,7 @@
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
             // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
-            // eeee""-.,-,"
+            // eeee""-.,-,"01235456789
 
             display-name = "(X^2)^2";
             bindings = <
