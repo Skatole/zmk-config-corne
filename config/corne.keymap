@@ -1031,7 +1031,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mo 2>, <&mo 1>;
-        }
+        };
 
     };
 
