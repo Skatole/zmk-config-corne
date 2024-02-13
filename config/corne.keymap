@@ -1023,8 +1023,8 @@
         tp_lyr1: tap_dance_layer1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mo 1>, <&tog 2>, <&tog 3>;
+            tapping-term-ms = <300>;
+            bindings = <&mo 1>, <&mo 2>, <&mo 3>;
         };
         tp_lyr2: tap_dance_layer2 {
               compatible = "zmk,behavior-tap-dance";
@@ -1044,8 +1044,8 @@
             // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
             
-            //qwertzuiopúűűűűUüüüaúűúuUsdfdsSDFFíIjoöóQqüüU
-
+            //   
+        
             display-name = "CSALLAP";
             bindings = <
 &kp TAB    &kp Q      &kp W     &e_ht 0 E  &kp R      &kp T        &kp Y    &td_u  &i_ht 0 I   &td_o     &kp P       &kp BSPC
