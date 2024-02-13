@@ -952,7 +952,7 @@
             bindings = <&kp N3>, <&kp F3>;
         };
 
-        td_n4f5: tap_dance_n4_f4 {
+        td_n4f4: tap_dance_n4_f4 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
