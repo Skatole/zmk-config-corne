@@ -18,7 +18,7 @@
         combo_gamelayer {
             timeout-ms = <50>;
             key-positions = <37 40>;
-            bindings = <&tog 4>;
+            bindings = <&tog 5>;
         };
 
         combo_settinglayer {
@@ -1047,7 +1047,7 @@
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
             // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-            //   456123*+(=[$_?$])$?~?$_?~$_?$_?$_?$_?$_?$_?$_?$_?$??[[654]]
+            //   3201234678901235678
             
         
             display-name = "CSALLAP";
