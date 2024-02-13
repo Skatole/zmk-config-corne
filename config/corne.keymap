@@ -1024,16 +1024,16 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mo 1>, <&mo 2>, <&mo 3>;
+            bindings = <&mo 1>, <&to 2>, <&to 3>;
         };
         tp_lyr2: tap_dance_layer2 {
               compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mo 2>, <&mo 1>;
+            bindings = <&mo 2>, <&to 1>;
         };
-
-    };
+  
+    };   $~?$
 
     keymap {
         compatible = "zmk,keymap";
@@ -1059,9 +1059,9 @@
         num_layer {
             display-name = "UTYULU-PUTYULU";
             bindings = <
-&trans  &kp KP_N0 &td_n1f1  &td_n2f2  &td_n3f3  &kp F4             &none  &none          &mt PG_UP UP    &none          &none  &trans
-&trans  &none     &td_n4f5  &td_n5f6  &td_n6f7  &kp F8             &none  &mt HOME LEFT  &mt PG_DN DOWN  &mt END RIGHT  &none  &trans
-&trans  &none     &td_n7f9  &td_n8f10 &td_n9f11 &kp F12            &none  &none          &none           &none          &none  &trans
+&trans  &kp KP_N0 &td_n1f1  &td_n2f2  &td_n3f3  &kp F4             &kp K_VOL_UP  &none          &mt PG_UP UP    &none          &kp PRINTSCREEN  &trans
+&trans  &none     &td_n4f5  &td_n5f6  &td_n6f7  &kp F8             &kp K_VOL_DN &mt HOME LEFT  &mt PG_DN DOWN  &mt END RIGHT  &none  &trans
+&trans  &none     &td_n7f9  &td_n8f10 &td_n9f11 &kp F12            &kp K_MUTE  &none          &none           &none          &none  &trans
                             &trans    &trans   &trans             &trans &trans         &trans
             >;
         };
@@ -1073,6 +1073,7 @@
             // | SHFT |  %  |  /  |  \  |  {  |  }  |        |  |  |      |     |   @    |     |     |
             //                    | GUI |     | SPC |        | ENT |     | ALT |
             //
+
 
             display-name = "KIS CICA";
             bindings = <
