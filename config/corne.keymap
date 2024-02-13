@@ -268,7 +268,6 @@
 
         // SPECIAL CHARS:
         //1ST ROW
-
         alt_CARET: alt_CARET {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -354,7 +353,6 @@
         };
 
         //2ND ROW
-
         alt_EQUAL: alt_EQUAL {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -464,7 +462,6 @@
         };
 
         //3RD ROW
-
         alt_PRCNT: alt_PRCNT {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -538,7 +535,6 @@
         };
 
         //SQT;DQT;MINUS;DOT;COMMA UNDER
-
         alt_COMMA: alt_COMMA {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -598,6 +594,7 @@
                 <&macro_release>,
                 <&kp LALT>;
         };
+
         alt_UNDER: alt_UNDER {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -621,6 +618,7 @@
                 <&macro_release>,
                 <&kp LALT>;
         };
+
         alt_gthn: alt_gthn {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -632,6 +630,7 @@
                 <&macro_release>,
                 <&kp LALT>;
         };
+
         alt_QESTN: alt_QESTN {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -643,6 +642,7 @@
                 <&macro_release>,
                 <&kp LALT>;
         };
+
         alt_COLON: alt_COLON {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -654,6 +654,7 @@
                 <&macro_release>,
                 <&kp LALT>;
         };
+
         alt_USCR: alt_USCR {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -700,24 +701,28 @@
             bindings = <&m_alt_a>, <&m_alt_CAPSA>;
             mods = <(MOD_LSFT)>;
         };
+
         mod_e: mod_e {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&m_alt_e>, <&m_alt_CAPSE>;
             mods = <(MOD_LSFT)>;
         };
+
         mod_i: mod_i {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&m_alt_i>, <&m_alt_CAPSI>;
             mods = <(MOD_LSFT)>;
         };
+
         mod_o_1: mod_o_1 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&m_alt_1_o>, <&m_alt_1_CAPSO>;
             mods = <(MOD_LSFT)>;
         };
+
         mod_o_2: mod_o_2 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -725,6 +730,7 @@
             mods = <(MOD_LSFT)>;
             keep-mods = <(MOD_LSFT)>;
         };
+
         mod_o_3: mod_o_3 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -733,12 +739,14 @@
             keep-mods = <(MOD_LSFT)>;
 
         };
+
         mod_u_1: mod_u_1 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&m_alt_1_u>, <&m_alt_1_CAPSU>;
             mods = <(MOD_LSFT)>;
         };
+
         mod_u_2: mod_u_2 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -746,6 +754,7 @@
             mods = <(MOD_LSFT)>;
             keep-mods = <(MOD_LSFT)>;
         };
+
         mod_u_3: mod_u_3 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -753,7 +762,6 @@
             mods = <(MOD_LSFT)>;
             keep-mods = <(MOD_LSFT)>;
         };
-
 
         mod_up: mod_up {
             compatible = "zmk,behavior-mod-morph";
@@ -771,7 +779,6 @@
             keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT)>;
         };
         
-
         mod_left: mod_left {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = < 0>;
@@ -789,11 +796,7 @@
             mods = <(MOD_LGUI | MOD_LALT | MOD_RGUI | MOD_RSFT)>;
             keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT)>;
 
-        };
-
-        
-
-
+        };   
 
 // bspc_del: backspace_delete {
 //             compatible = "zmk,behavior-mod-morph";
@@ -801,18 +804,14 @@
 //             bindings = <&kp BACKSPACE>, <&kp DELETE>;
 //             mods = <(MOD_LSFT|MOD_RSFT)>;
 //             keep-mods = <(MOD_RSFT)>;
-//         };
-
-
-                
+//         };              
 
  // HOLD TAP
-
         a_ht: a_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
+            require-prior-idle-ms = <125>;
             flavor = "tap-preferred";
             bindings = <&mod_a>, <&kp>;
         };
@@ -821,7 +820,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
+            require-prior-idle-ms = <125>;
             flavor = "tap-preferred";
             bindings = <&mod_e>, <&mod_up>;
         };
@@ -830,7 +829,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
+            require-prior-idle-ms = <125>;
             flavor = "tap-preferred";
             bindings = <&mod_i>, <&kp>;
         };
@@ -839,7 +838,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
+            require-prior-idle-ms = <125>;
             flavor = "tap-preferred";
             bindings = <&mod_o_1>, <&kp>;
         };
@@ -848,7 +847,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
+            require-prior-idle-ms = <125>;
             flavor = "tap-preferred";
             bindings = <&mod_o_3>, <&mod_o_2>;
         };
@@ -857,7 +856,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
+            require-prior-idle-ms = <125>;
             flavor = "tap-preferred";
             bindings = <&mod_u_1>, <&kp>;
         };
@@ -866,7 +865,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
+            require-prior-idle-ms = <125>;
             flavor = "tap-preferred";
             bindings = <&mod_u_3>, <&mod_u_2>;
         };
@@ -875,7 +874,7 @@
         //     compatible = "zmk,behavior-hold-tap";
         //     #binding-cells = <2>;
         //     tapping-term-ms = <150>;
-        //     quick-tap-ms = <0>;
+        //     require-prior-idle-ms = <125>;
         //     flavor = "tap-preferred";
         //     bindings = <&alt_DQT>, <&alt_SQT>;
         // };
@@ -884,7 +883,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
+            require-prior-idle-ms = <125>;
             flavor = "tap-preferred";
             bindings = <&alt_GRAVE>, <&alt_SQT>;
         };
@@ -953,53 +952,55 @@
             bindings = <&kp N3>, <&kp F3>;
         };
 
-        td_n4f5: tap_dance_n4_f5 {
+        td_n4f5: tap_dance_n4_f4 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp N4>, <&kp F5>;
+            bindings = <&kp N4>, <&kp F4>;
         };
 
-        td_n5f6: tap_dance_n5_f6 {
+        td_n5f6: tap_dance_n5_f5 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp N5>, <&kp F6>;
+            bindings = <&kp N5>, <&kp F5>;
         };
 
-        td_n6f7: tap_dance_n6_f7 {
+        td_n6f5: tap_dance_n6_f5 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp N6>, <&kp F7>;
+            bindings = <&kp N6>, <&kp F5>;
         };
 
-        td_n7f9: tap_dance_n7_f9 {
+        td_n7f6: tap_dance_n7_f6 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp N7>, <&kp F9>;
+            bindings = <&kp N7>, <&kp F6>;
         };
 
-        td_n8f10: tap_dance_n8_f10 {
+        td_n8f7: tap_dance_n8_f7 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp N8>, <&kp F10>;
+            bindings = <&kp N8>, <&kp F7>;
         };
 
-        td_n9f11: tap_dance_n9_f11 {
+        td_n9f8: tap_dance_n9_f8 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp N9>, <&kp F11>;
+            bindings = <&kp N9>, <&kp F9>;
         };
+
         td_sdqt: tap_dance_sdqt {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&apos_ht 0 0>, <&alt_DQT>;
         };
+
         //CTRL_C + V tapD
         td_ctrl_c: tap_dance_ctrl_c {
             compatible = "zmk,behavior-tap-dance";
@@ -1007,6 +1008,7 @@
             tapping-term-ms = <200>;
             bindings = <&kp C>, <&ctrl_c>;
         };
+
         td_ctrl_v: tap_dance_ctrl_v {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -1020,17 +1022,19 @@
             tapping-term-ms = <200>;
             bindings = <&kp LCTRL>, <&kp LC(LSHFT)>;
         };
+
         tp_lyr1: tap_dance_layer1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&mo 1>, <&mo 2>, <&mo 3>;
+            bindings = <&mo 2>, <&mo 1>, <&mo 3>;
         };
+
         tp_lyr2: tap_dance_layer2 {
               compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mo 2>, <&tog 1>;
+            tapping-term-ms = <300>;
+            bindings = <&mo 3>, <&mo 2>, <&mo 4> ;
         };
     };
 
@@ -1043,25 +1047,34 @@
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
             // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+            //   456123*+(=[$_?$])$?~?$_?~$_?$_?$_?$_?$_?$_?$_?$_?$??[[654]]
             
-            //   
         
             display-name = "CSALLAP";
             bindings = <
-&kp TAB    &kp Q      &kp W     &e_ht 0 E  &kp R      &kp T        &kp Y    &td_u  &i_ht 0 I   &td_o     &kp P       &kp BSPC
-&kp LSHFT  &a_ht 0 A  &mod_left &mod_down  &mod_right &kp G        &kp H    &kp J  &kp K       &kp L     &td_sdqt    &kp LSHFT
-&td_cshift &kp Z      &kp X     &td_ctrl_c &td_ctrl_v &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp LALT
-                             &td_ag     &tp_lyr1  &kp SPACE        &kp RET  &tp_lyr2  &kp RALT
+&kp TAB    &kp Q      &kp W     &e_ht 0 E  &kp R      &kp T        &kp Y    &td_u     &i_ht 0 I  &td_o    &kp P     &kp BSPC
+&kp LSHFT  &a_ht 0 A  &mod_left &mod_down  &mod_right &kp G        &kp H    &kp J     &kp K      &kp L    &td_sdqt  &kp LSHFT
+&td_cshift &kp Z      &kp X     &td_ctrl_c &td_ctrl_v &kp B        &kp N    &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp LALT
+                                &td_ag     &tp_lyr1   &kp SPACE    &kp RET  &tp_lyr2  &kp RALT
             >;
         };
 
         num_layer {
             display-name = "UTYULU-PUTYULU";
             bindings = <
-&trans  &kp KP_N0 &td_n1f1  &td_n2f2  &td_n3f3  &kp F4             &kp K_VOL_UP  &none          &mt PG_UP UP    &none          &kp PRINTSCREEN  &trans
-&trans  &none     &td_n4f5  &td_n5f6  &td_n6f7  &kp F8             &kp K_VOL_DN &mt HOME LEFT  &mt PG_DN DOWN  &mt END RIGHT  &none  &trans
-&trans  &none     &td_n7f9  &td_n8f10 &td_n9f11 &kp F12            &kp K_MUTE  &none          &none           &none          &none  &trans
-                            &trans    &trans   &trans             &trans &trans         &trans
+&trans  &kp KP_N0 &td_n1f1  &td_n2f2  &td_n3f3  &td_n4f4           &kp C_VOLUME_UP   &none          &mt PG_UP UP    &none          &kp PRINTSCREEN  &trans
+&trans  &kp N5    &td_n6f5  &td_n7f6  &td_n8f7  &td_n9f8           &kp C_VOLUME_DOWN &mt HOME LEFT  &mt PG_DN DOWN  &mt END RIGHT  &none            &trans
+&trans  &none     &kp F9    &kp F10   &kp F11   &kp F12            &kp C_MUTE        &none          &none           &none          &none            &trans
+                            &trans    &trans    &trans             &trans            &trans         &trans
+            >;
+        };
+        mirror_num_layer {
+            display-name = "PUTYULU-UTYULU";
+            bindings = <
+&trans  &kp PRINTSCREEN  &none         &mt PG_UP UP    &none          &kp C_VOLUME_UP            &td_n4f4 &td_n3f3  &td_n2f2  &td_n1f1  &kp KP_N0 &trans
+&trans  &none            &mt HOME LEFT &mt PG_DN DOWN  &mt END RIGHT  &kp K_VOL_DN               &td_n9f8 &td_n8f7  &td_n7f6  &td_n6f5  &kp N5    &trans
+&trans  &none            &none         &none           &none          &kp K_MUTE                 &kp F12  &kp F11   &kp F10   &kp F9    &none     &trans
+                                       &trans          &trans         &trans                     &trans   &trans    &trans
             >;
         };
 
