@@ -30,10 +30,10 @@
 
 
 
-        combo_caps {
+        combo_shiftalt {
             timeout-ms = <50>;
             key-positions = <12 13>;
-            bindings = <&kp LS(LA)>;
+            bindings = <&caps_word>;
         };
 
         combo_del {
@@ -1024,11 +1024,11 @@
             tapping-term-ms = <200>;
             bindings = <&kp LCTRL>, <&kp LC(LSHFT)>;
         };
-        td_capshift: tap_dance_capshift {
+        td_shiftalt: tap_dance_shiftalt {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
-            bindings = <&kp LSHIFT>, <&caps_word>;
+            bindings = <&kp LSHIFT>, <&kp LS(LALT);
         };
 
         tp_lyr1: tap_dance_layer1 {
@@ -1061,7 +1061,7 @@
             display-name = "CSALLAP";
             bindings = <
 &kp TAB    &kp Q      &kp W     &e_ht 0 E  &kp R      &kp T        &kp Y    &td_u     &i_ht 0 I  &td_o    &kp P     &kp BSPC
-&td_capshift  &a_ht 0 A  &mod_left &mod_down  &mod_right &kp G        &kp H    &kp J     &kp K      &kp L    &td_sdqt  &td_capshift
+&td_shiftalt  &a_ht 0 A  &mod_left &mod_down  &mod_right &kp G        &kp H    &kp J     &kp K      &kp L    &td_sdqt  &td_shiftalt
 &td_cshift &kp Z      &kp X     &td_ctrl_c &td_ctrl_v &kp B        &kp N    &kp M     &kp COMMA  &kp DOT  &kp FSLH  &td_cshift
                                 &td_ag     &tp_lyr1   &mt LA(TAB) SPACE   &mt LG(LC(LALT)) SPACE &tp_lyr2  &kp RALT
             >;
@@ -1155,3 +1155,5 @@
         };
     };
 };
+
+
