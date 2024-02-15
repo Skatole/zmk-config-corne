@@ -1010,28 +1010,29 @@
         td_ctrl_c: tap_dance_ctrl_c {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <250>;
             bindings = <&kp C>, <&ctrl_c>;
         };
 
         td_ctrl_v: tap_dance_ctrl_v {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <250>;
             bindings = <&kp V>, <&ctrl_v>;
         };
 
         td_cshift: tap_dance_cshift {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <300>;
             bindings = <&kp LCTRL>, <&kp LC(LSHFT)>;
         };
+
         td_shiftalt: tap_dance_shiftalt {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
-            bindings = <&kp LSHIFT>, <&kp LS(LALT);
+            tapping-term-ms = <300>;
+            bindings = <&kp LSHIFT>, <&kp LS(LALT)>;
         };
 
         tp_lyr1: tap_dance_layer1 {
@@ -1045,7 +1046,7 @@
               compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&mo 3>, <&mo 2>, <&mo 4> ;
+            bindings = <&mo 3>, <&mo 2>, <&mo 4>;
         };
     };
 
