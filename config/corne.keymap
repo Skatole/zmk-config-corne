@@ -3,11 +3,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
-
-/ {
     &caps_word {
         continue-list = <UNDERSCORE MINUS LALT N0 KP_N0 N1 N2 N3 N4 N5 N6 N7 N8 N9 NON_US_HASH LEFT_BRACKET>;
     };
+
+/ {
  
     combos {
         compatible = "zmk,combos";
@@ -887,7 +887,7 @@
         apos_ht: apos_ht {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <150>; 
             require-prior-idle-ms = <125>;
             flavor = "tap-preferred";
             bindings = <&alt_GRAVE>, <&alt_SQT>;
