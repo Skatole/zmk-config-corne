@@ -1053,7 +1053,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        base_layer {
+        base_layer {  
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -1067,7 +1067,7 @@
 &kp TAB    &kp Q      &kp W     &e_ht 0 E  &kp R      &kp T        &kp Y    &td_u     &i_ht 0 I  &td_o    &kp P     &kp BSPC
 &td_shiftalt  &a_ht 0 A  &mod_left &mod_down  &mod_right &kp G        &kp H    &kp J     &kp K      &kp L    &td_sdqt  &td_shiftalt
 &td_cshift &kp Z      &kp X     &td_ctrl_c &td_ctrl_v &kp B        &kp N    &kp M     &kp COMMA  &kp DOT  &kp FSLH  &td_cshift
-                                &td_ag     &tp_lyr1   &mt LA(TAB) SPACE   &mt LG(LC(LALT)) ENTER &tp_lyr2  &kp RALT
+                                &td_ag     &tp_lyr1   &mt LC(LA(TAB)) SPACE   &mt LG(LC(LALT)) ENTER &tp_lyr2  &kp RALT
             >;
         };
 
