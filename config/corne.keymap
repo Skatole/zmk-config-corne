@@ -5,7 +5,10 @@
 
 
 / {
-
+    &caps_word {
+        continue-list = <UNDERSCORE MINUS LALT N0 KP_N0 N1 N2 N3 N4 N5 N6 N7 N8 N9 NON_US_HASH LEFT_BRACKET>;
+    };
+ 
     combos {
         compatible = "zmk,combos";
 
@@ -812,8 +815,8 @@
         a_ht: a_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            require-prior-idle-ms = <125>;
+            tapping-term-ms = <220>;
+            require-prior-idle-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&mod_a>, <&kp>;
         };
@@ -821,8 +824,8 @@
         e_ht: e_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            require-prior-idle-ms = <125>;
+            tapping-term-ms = <220>;
+            require-prior-idle-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&mod_e>, <&mod_up>;
         };
@@ -830,8 +833,8 @@
         i_ht: i_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            require-prior-idle-ms = <125>;
+            tapping-term-ms = <220>;
+            require-prior-idle-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&mod_i>, <&kp>;
         };
@@ -839,8 +842,8 @@
         o_1_ht: o_1_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            require-prior-idle-ms = <125>;
+            tapping-term-ms = <220>;
+            require-prior-idle-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&mod_o_1>, <&kp>;
         };
@@ -848,8 +851,8 @@
         o_2_ht: o_2_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            require-prior-idle-ms = <125>;
+            tapping-term-ms = <220>;
+            require-prior-idle-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&mod_o_3>, <&mod_o_2>;
         };
@@ -857,8 +860,8 @@
         u_1_ht: u_1_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            require-prior-idle-ms = <125>;
+            tapping-term-ms = <220>;
+            require-prior-idle-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&mod_u_1>, <&kp>;
         };
@@ -866,8 +869,8 @@
         u_2_ht: u_2_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            require-prior-idle-ms = <125>;
+            tapping-term-ms = <220>;
+            require-prior-idle-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&mod_u_3>, <&mod_u_2>;
         };
@@ -884,7 +887,7 @@
         apos_ht: apos_ht {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             require-prior-idle-ms = <125>;
             flavor = "tap-preferred";
             bindings = <&alt_GRAVE>, <&alt_SQT>;
@@ -897,7 +900,7 @@
         td_o: tap_dance_o {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&o_1_ht 0 O>, <&o_2_ht 0 0>;
         };
 
@@ -908,91 +911,91 @@
         td_u: tap_dance_u {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&u_1_ht 0 U>, <&u_2_ht 0 0>;
         };
 
         td_ag: tap_dance_alt_gui {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&kp LALT>, <&kp LGUI>;
         };
 
         td_pm: tap_dance_plus_minus {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&kp KP_PLUS>, <&kp KP_MINUS>;
         };
 
         td_ltgt: tap_dance_less_bigger_than {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&alt_lt>, <&alt_gt>;
         };
 
         td_n1f1: tap_dance_n1_f1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&kp N1>, <&kp F1>;
         };
 
         td_n2f2: tap_dance_n2_f2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&kp N2>, <&kp F2>;
         };
 
         td_n3f3: tap_dance_n3_f3 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&kp N3>, <&kp F3>;
         };
 
         td_n4f4: tap_dance_n4_f4 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&kp N4>, <&kp F4>;
         };
 
         td_n5f6: tap_dance_n5_f5 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&kp N5>, <&kp F5>;
         };
 
         td_n6f5: tap_dance_n6_f5 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&kp N6>, <&kp F5>;
         };
 
         td_n7f6: tap_dance_n7_f6 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&kp N7>, <&kp F6>;
         };
 
         td_n8f7: tap_dance_n8_f7 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&kp N8>, <&kp F7>;
         };
 
         td_n9f8: tap_dance_n9_f8 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&kp N9>, <&kp F9>;
         };
 
@@ -1007,21 +1010,21 @@
         td_ctrl_c: tap_dance_ctrl_c {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&kp C>, <&ctrl_c>;
         };
 
         td_ctrl_v: tap_dance_ctrl_v {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&kp V>, <&ctrl_v>;
         };
 
         td_cshift: tap_dance_cshift {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&kp LCTRL>, <&kp LC(LSHFT)>;
         };
         td_shiftalt: tap_dance_shiftalt {
