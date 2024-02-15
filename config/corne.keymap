@@ -28,10 +28,12 @@
             layers = <3>;
         };
 
+
+
         combo_caps {
             timeout-ms = <50>;
             key-positions = <12 13>;
-            bindings = <&caps_word>;
+            bindings = <&kp LS(LA)>;
         };
 
         combo_del {
@@ -765,8 +767,8 @@
 
         mod_up: mod_up {
             compatible = "zmk,behavior-mod-morph";
-            #binding-cells = < 0>;
             bindings = <&kp E>, <&kp UP>;
+            #binding-cells = < 0>;
             mods = <(MOD_LGUI|MOD_LALT|MOD_RGUI)>;
             keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT)>;
         };
@@ -1022,6 +1024,12 @@
             tapping-term-ms = <200>;
             bindings = <&kp LCTRL>, <&kp LC(LSHFT)>;
         };
+        td_capshift: tap_dance_capshift {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&kp LSHIFT>, <&caps_word>;
+        };
 
         tp_lyr1: tap_dance_layer1 {
             compatible = "zmk,behavior-tap-dance";
@@ -1053,9 +1061,9 @@
             display-name = "CSALLAP";
             bindings = <
 &kp TAB    &kp Q      &kp W     &e_ht 0 E  &kp R      &kp T        &kp Y    &td_u     &i_ht 0 I  &td_o    &kp P     &kp BSPC
-&kp LSHFT  &a_ht 0 A  &mod_left &mod_down  &mod_right &kp G        &kp H    &kp J     &kp K      &kp L    &td_sdqt  &kp LSHFT
-&td_cshift &kp Z      &kp X     &td_ctrl_c &td_ctrl_v &kp B        &kp N    &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp LALT
-                                &td_ag     &tp_lyr1   &kp SPACE    &kp RET  &tp_lyr2  &kp RALT
+&td_capshift  &a_ht 0 A  &mod_left &mod_down  &mod_right &kp G        &kp H    &kp J     &kp K      &kp L    &td_sdqt  &td_capshift
+&td_cshift &kp Z      &kp X     &td_ctrl_c &td_ctrl_v &kp B        &kp N    &kp M     &kp COMMA  &kp DOT  &kp FSLH  &td_cshift
+                                &td_ag     &tp_lyr1   &mt LA(TAB) SPACE   &mt LG(LC(LALT)) SPACE &tp_lyr2  &kp RALT
             >;
         };
 
@@ -1072,8 +1080,8 @@
             display-name = "PUTYULU-UTYULU";
             bindings = <
 &trans  &kp PRINTSCREEN  &none         &mt PG_UP UP    &none          &kp C_VOLUME_UP            &td_n4f4 &td_n3f3  &td_n2f2  &td_n1f1  &kp KP_N0 &trans
-&trans  &none            &mt HOME LEFT &mt PG_DN DOWN  &mt END RIGHT  &kp K_VOL_DN               &td_n9f8 &td_n8f7  &td_n7f6  &td_n6f5  &kp N5    &trans
-&trans  &none            &none         &none           &none          &kp K_MUTE                 &kp F12  &kp F11   &kp F10   &kp F9    &none     &trans
+&trans  &none            &mt HOME LEFT &mt PG_DN DOWN  &mt END RIGHT  &kp C_VOLUME_DOWN          &td_n9f8 &td_n8f7  &td_n7f6  &td_n6f5  &kp N5    &trans
+&trans  &none            &none         &none           &none          &kp C_MUTE                 &kp F12  &kp F11   &kp F10   &kp F9    &none     &trans
                                        &trans          &trans         &trans                     &trans   &trans    &trans
             >;
         };
