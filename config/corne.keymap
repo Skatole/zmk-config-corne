@@ -999,7 +999,7 @@
             bindings = <&kp N9>, <&kp F9>;
         };
 
-        td_sdqt: tap_dance_sdqt { '"''`"""""
+        td_sdqt: tap_dance_sdqt {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
