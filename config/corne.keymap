@@ -1124,14 +1124,14 @@ behaviours {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp k>, <&kp LC(LSHFT(K))>;
+            bindings = <&kp k>, <&kp LC(RS(K))>;
         };
 
         td_cshift: tap_dance_cshift {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&kp LCTRL>, <&kp LC(LSHFT)>;
+            bindings = <&kp LCTRL>, <&kp LC(LSHIFT)>;
         };
 
         td_shiftalt: tap_dance_shiftalt {
