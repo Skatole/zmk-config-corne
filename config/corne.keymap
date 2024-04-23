@@ -732,7 +732,7 @@
             #binding-cells = <0>;
             bindings = <&m_alt_i>, <&m_alt_CAPSI>;
             mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT | MOD_LSFT)>;
-            keep-mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT | MOD_LSFT)>;;
+            keep-mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT | MOD_LSFT)>;
         };
 
         mod_o_1: mod_o_1 {
@@ -764,7 +764,7 @@
             #binding-cells = <0>;
             bindings = <&m_alt_1_u>, <&m_alt_1_CAPSU>;
             mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT | MOD_LSFT)>;
-            keep-mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT | MOD_LSFT)>;>;
+            keep-mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT | MOD_LSFT)>;
         };
 
         mod_u_2: mod_u_2 {
@@ -804,7 +804,7 @@
             #binding-cells = < 0>;
             bindings = <&kp S>, <&kp LEFT>;
             m  mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT)>;
-            keep-mods = <(MOD_LGUI|MOD_LALT)>
+            keep-mods = <(MOD_LGUI|MOD_LALT)>;
         };
 
         mod_right: mod_right {
