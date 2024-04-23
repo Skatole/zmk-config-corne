@@ -845,13 +845,7 @@ behaviours {
             keep-mods = <(MOD_LGUI|MOD_LALT)>;
         };   
 
-// bspc_del: backspace_delete {
-//             compatible = "zmk,behavior-mod-morph";
-//             #binding-cells = <0>;
-//             bindings = <&kp BACKSPACE>, <&kp DELETE>;
-//             mods = <(MOD_LSFT|MOD_RSFT)>;
-//             keep-mods = <(MOD_RSFT)>;
-//         };              
+       
 
  // HOLD TAP
         a_ht: a_hold_tap {
@@ -1199,7 +1193,7 @@ behaviours {
             bindings = <&mo KIS_CICA>, <&mo ARROW>, <&mo CSETTINGZ>;
         };
     };
-};
+
 
 
 
