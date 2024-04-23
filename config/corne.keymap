@@ -1118,9 +1118,9 @@
         mirror_num_layer {
             display-name = "PUTYULU-UTYULU";
             bindings = <
-&trans  &kp PRINTSCREEN  &none         &mt PG_UP UP    &none          &kp C_VOLUME_UP            &td_n4f4 &td_n3f3  &td_n2f2  &td_n1f1  &kp KP_N0 &trans
-&trans  &none            &mt HOME LEFT &mt PG_DN DOWN  &mt END RIGHT  &kp C_VOLUME_DOWN          &td_n9f8 &td_n8f7  &td_n7f6  &td_n6f5  &kp N5    &trans
-&trans  &none            &none         &none           &none          &kp C_MUTE                 &kp F12  &kp F11   &kp F10   &kp F9    &none     &trans
+&trans  &kp PRINTSCREEN  &none         &mt PG_UP UP    &none          &kp C_VOLUME_UP            &trans &trans  &trans  &trans  &trans &trans
+&trans  &none            &mt HOME LEFT &mt PG_DN DOWN  &mt END RIGHT  &kp C_VOLUME_DOWN          &trans &trans  &trans  &trans  &trans &trans
+&trans  &none            &none         &none           &none          &kp C_MUTE                 &trans &trans  &trans  &trans  &trans &trans
                                        &trans          &trans         &trans                     &trans   &trans    &trans
             >;
         };
