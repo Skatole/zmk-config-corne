@@ -1140,7 +1140,7 @@ behaviours {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
-            bindings = <&kp R>, <&kp LC(R)>;
+            bindings = <&kp K>, <&kp LC(K)>;
         };
 
         td_cshift: tap_dance_cshift {
