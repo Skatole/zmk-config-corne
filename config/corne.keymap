@@ -10,13 +10,8 @@
 / {
  
     combos {
-        compatible = "zmk,combos";
 
-        combo_esc {
-            timeout-ms = <50>;
-            bindings = <&kp ESC>;
-            key-positions = <0 1>;
-        };
+        compatible = "zmk,combos";
 
         combo_gamelayer {
             timeout-ms = <50>;
@@ -26,12 +21,28 @@
 
         combo_settinglayer {
             timeout-ms = <50>;
-            key-positions = <>;
+            key-positions = <0 36 11 41>;
             bindings = <&tog 3>;
-            layers = <3>;
         };
 
+        combo_numpadlayer {
+            timeout-ms = <50>;
+            key-positions = <0 37>;
+            bindings = <&tog 4>;
+        };
 
+        combo_ctrl_gui {
+            timeout-ms = <50>;
+            key-positions = <38 39>;
+            bindings = <&kp LG(LCTRL)>;
+        }
+
+
+        combo_esc {
+            timeout-ms = <50>;
+            bindings = <&kp ESC>;
+            key-positions = <0 1>;
+        };
 
         combo_shiftalt {
             timeout-ms = <50>;
@@ -704,103 +715,104 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&m_alt_a>, <&m_alt_CAPSA>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT | MOD_LSFT)>;
+            keep-mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT | MOD_LSFT)>;
         };
 
         mod_e: mod_e {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&m_alt_e>, <&m_alt_CAPSE>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT | MOD_LSFT)>;
+            keep-mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT | MOD_LSFT)>;
         };
 
         mod_i: mod_i {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&m_alt_i>, <&m_alt_CAPSI>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT | MOD_LSFT)>;
+            keep-mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT | MOD_LSFT)>;;
         };
 
         mod_o_1: mod_o_1 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&m_alt_1_o>, <&m_alt_1_CAPSO>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT | MOD_LSFT)>;
+            keep-mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT | MOD_LSFT)>;
         };
 
         mod_o_2: mod_o_2 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&m_alt_2_o>, <&kp N0>;
-            mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
+            mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT | MOD_LSFT)>;
+            keep-mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT | MOD_LSFT)>;
         };
 
         mod_o_3: mod_o_3 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACKET>, <&kp LEFT_BRACKET>;
-            mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
-
+            mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT | MOD_LSFT)>;
+            keep-mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT | MOD_LSFT)>;
         };
 
         mod_u_1: mod_u_1 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&m_alt_1_u>, <&m_alt_1_CAPSU>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT | MOD_LSFT)>;
+            keep-mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT | MOD_LSFT)>;>;
         };
 
         mod_u_2: mod_u_2 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&m_alt_2_u>, <&kp MINUS>;
-            mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
+            mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT | MOD_LSFT)>;
+            keep-mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT | MOD_LSFT)>;
         };
 
         mod_u_3: mod_u_3 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp NON_US_HASH>, <&kp NON_US_HASH>;
-            mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
+            mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT | MOD_LSFT)>;
+            keep-mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT | MOD_LSFT)>;
         };
 
         mod_up: mod_up {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp E>, <&kp UP>;
             #binding-cells = < 0>;
-            mods = <(MOD_LGUI|MOD_LALT|MOD_RGUI)>;
-            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT)>;
+              mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT)>;
+            keep-mods = <(MOD_LGUI|MOD_LALT)>;
         };
 
         mod_down: mod_down {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = < 0>;
             bindings = <&kp D>, <&kp DOWN>;
-            mods = <(MOD_LGUI | MOD_LALT | MOD_RGUI )>;
-            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT)>;
+             mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT)>;
+            keep-mods = <(MOD_LGUI|MOD_LALT)>;
         };
         
         mod_left: mod_left {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = < 0>;
             bindings = <&kp S>, <&kp LEFT>;
-            mods = <(MOD_LGUI | MOD_LALT | MOD_RGUI | MOD_RSFT )>;
-            keep-mods = <(MOD_LGUI|MOD_RGUI
-                |MOD_LALT)>;
-
+            m  mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT)>;
+            keep-mods = <(MOD_LGUI|MOD_LALT)>
         };
 
         mod_right: mod_right {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp F>, <&kp RIGHT>;
-            mods = <(MOD_LGUI | MOD_LALT | MOD_RGUI | MOD_RSFT)>;
-            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT)>;
-
+            mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT)>;
+            keep-mods = <(MOD_LGUI|MOD_LALT)>;
         };   
 
 // bspc_del: backspace_delete {
@@ -1002,7 +1014,7 @@
         td_sdqt: tap_dance_sdqt {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             bindings = <&apos_ht 0 0>, <&alt_DQT>;
         };
 
@@ -1010,16 +1022,32 @@
         td_ctrl_c: tap_dance_ctrl_c {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
-            bindings = <&kp C>, <&ctrl_c>;
+            tapping-term-ms = <200>;
+            bindings = <&kp C>, <&kp LC(C)>;
         };
 
         td_ctrl_v: tap_dance_ctrl_v {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
-            bindings = <&kp V>, <&ctrl_v>;
+            tapping-term-ms = <200>;
+            bindings = <&kp V>, <&kp LC(V)>;
         };
+
+        td_ctrl_z: tap_dance_ctrl_z {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp Z>, <&kp LC(Z)>;
+        };
+        
+        td_ctrl_y: tap_dance_ctrl_y {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp Y>, <&kp LC(Y)>;
+        };
+
+
 
         td_cshift: tap_dance_cshift {
             compatible = "zmk,behavior-tap-dance";
@@ -1033,6 +1061,13 @@
             #binding-cells = <0>;
             tapping-term-ms = <300>;
             bindings = <&kp LSHIFT>, <&kp LS(LALT)>;
+        };
+
+        td_shiftaltGR: tap_dance_shiftaltGR {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp LSHIFT>, <&kp RALT>;
         };
 
         tp_lyr1: tap_dance_layer1 {
@@ -1059,25 +1094,25 @@
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
             // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-            //   3201234678901235678
-            
+            // 0 11 36 41 settings layer
+            // 
         
             display-name = "CSALLAP";
             bindings = <
-&kp TAB    &kp Q      &kp W     &e_ht 0 E  &kp R      &kp T        &kp Y    &td_u     &i_ht 0 I  &td_o    &kp P     &kp BSPC
-&td_shiftalt  &a_ht 0 A  &mod_left &mod_down  &mod_right &kp G        &kp H    &kp J     &kp K      &kp L    &td_sdqt  &td_shiftalt
-&td_cshift &kp Z      &kp X     &td_ctrl_c &td_ctrl_v &kp B        &kp N    &kp M     &kp COMMA  &kp DOT  &kp FSLH  &td_cshift
-                                &td_ag     &tp_lyr1   &mt LC(LA(TAB)) SPACE   &mt LG(LC(LALT)) ENTER &tp_lyr2  &kp RALT
+&kp TAB       &kp Q      &kp W     &e_ht 0 E  &kp R      &kp T       &td_ctrl_y          &td_u     &i_ht 0 I  &td_o    &kp P     &kp BSPC
+&td_shiftalt  &a_ht 0 A  &mod_left &mod_down  &mod_right &kp G       &kp H          &kp J     &kp K      &kp L    &td_sdqt  &td_shiftaltGR
+&td_cshift    &td_ctrl_z     &kp X     &td_ctrl_c &td_ctrl_v &kp B       &kp N          &kp M     &kp COMMA  &kp DOT  &kp FSLH  &td_cshift
+                                   &td_ag     &tp_lyr1   &kp SPACE   &mt RGUI ENTER &tp_lyr2  &kp LALT
             >;
         };
 
         num_layer {
             display-name = "UTYULU-PUTYULU";
             bindings = <
-&trans  &kp KP_N0 &td_n1f1  &td_n2f2  &td_n3f3  &td_n4f4           &kp C_VOLUME_UP   &none          &mt PG_UP UP    &none          &kp PRINTSCREEN  &trans
-&trans  &kp N5    &td_n6f5  &td_n7f6  &td_n8f7  &td_n9f8           &kp C_VOLUME_DOWN &mt HOME LEFT  &mt PG_DN DOWN  &mt END RIGHT  &none            &trans
-&trans  &none     &kp F9    &kp F10   &kp F11   &kp F12            &kp C_MUTE        &none          &none           &none          &none            &trans
-                            &trans    &trans    &trans             &trans            &trans         &trans
+&trans  &none       &kp KP_N7  &kp KP_N8  &kp KP_N9  &none         &kp F5  &kp F4  &kp F3  &kp F2  &kp F1  &trans
+&trans  &none       &kp KP_N4  &kp KP_N5  &kp KP_N6  &none         &kp F10 &kp F9  &kp F8  &kp F7  &kp F6  &trans
+&trans  &kp KP_N0   &kp KP_N1  &kp KP_N2  &kp KP_N3  &none         &kp F12 &kp F11 &none   &none   &none   &trans
+                               &trans     &trans     &trans        &trans  &trans  &trans
             >;
         };
         mirror_num_layer {
@@ -1120,7 +1155,7 @@
             bindings = <
 &out OUT_TOG  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4    &none    &none   &none     &none  &bt BT_CLR  &trans
 &out OUT_BLE  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &none    &none   &none     &none  &none  &trans
-&out OUT_USB  &none          &none          &none          &bt BT_PRV     &bt BT_NXT       &none    &none   &none     &none  &none  &trans
+&out OUT_USB  &none          &none          &bt BT_PRV     &bt BT_NXT     &none            &none    &none   &none     &none  &none  &trans
                                             &kp LGUI       &trans         &kp SPACE        &kp RET  &trans  &kp RALT
             >;
         };
