@@ -733,7 +733,7 @@
                 <&macro_tap>,
                 <&kp K>,
                 <&macro_release>,
-                <&kp LSHIFT>;
+                <&kp LSHIFT>,
                 <&macro_release>,
                 <&kp LCTRL>;
         };
