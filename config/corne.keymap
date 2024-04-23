@@ -829,8 +829,8 @@ behaviours {
             keep-mods = <(MOD_LGUI|MOD_LALT)>;
         };
         
-            compatible = "zmk,behavior-mod-morph";
         mod_left: mod_left {
+            compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp S>, <&kp LEFT>;
             mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT)>;
@@ -987,6 +987,12 @@ behaviours {
 
         td_n2f2: tap_dance_n2_f2 {
             compatible = "zmk,behavior-tap-dance";
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&kp N2>, <&kp F2>;
+        };
+
         td_n3f3: tap_dance_n3_f3 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -1136,7 +1142,7 @@ behaviours {
         };
 
 
-        td_ctrl_shift_k: tap_dance_ctrl_shift_k {
+        td_ctrl_shift_k: tap_dance_ctrl_shift_k {                   
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
