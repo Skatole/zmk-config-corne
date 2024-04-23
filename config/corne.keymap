@@ -803,7 +803,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = < 0>;
             bindings = <&kp S>, <&kp LEFT>;
-            ↓mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT)>;
+            mods = <(MOD_LGUI | MOD_LALT | MOD_RSFT)>;
             keep-mods = <(MOD_LGUI|MOD_LALT)>;
         };
 
