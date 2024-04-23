@@ -1070,6 +1070,20 @@
             bindings = <&kp LSHIFT>, <&kp RALT>;
         };
 
+        td_aster_bckslh: tap_dance_asterix_backslash {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&alt_ASTERIX>, <&alt_BSLH>;
+        };
+
+        td_dt_cm: tap_dance_dot_comma {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp DOT>, <&kp COMMA>;
+        };
+
         tp_lyr1: tap_dance_layer1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -1083,6 +1097,7 @@
             tapping-term-ms = <300>;
             bindings = <&mo 3>, <&mo 2>, <&mo 4>;
         };
+
     };
 
     keymap {
@@ -1099,9 +1114,9 @@
         
             display-name = "CSALLAP";
             bindings = <
-&kp TAB       &kp Q      &kp W     &e_ht 0 E  &kp R      &kp T       &td_ctrl_y          &td_u     &i_ht 0 I  &td_o    &kp P     &kp BSPC
+&kp TAB       &kp Q      &kp W     &e_ht 0 E  &kp R      &kp T       &td_ctrl_y     &td_u     &i_ht 0 I  &td_o    &kp P     &kp BSPC
 &td_shiftalt  &a_ht 0 A  &mod_left &mod_down  &mod_right &kp G       &kp H          &kp J     &kp K      &kp L    &td_sdqt  &td_shiftaltGR
-&td_cshift    &td_ctrl_z     &kp X     &td_ctrl_c &td_ctrl_v &kp B       &kp N          &kp M     &kp COMMA  &kp DOT  &kp FSLH  &td_cshift
+&td_cshift    &td_ctrl_z &kp X     &td_ctrl_c &td_ctrl_v &kp B       &kp N          &kp M     &kp COMMA  &kp DOT  &kp FSLH  &td_cshift
                                    &td_ag     &tp_lyr1   &kp SPACE   &mt RGUI ENTER &tp_lyr2  &kp LALT
             >;
         };
@@ -1109,10 +1124,10 @@
         num_layer {
             display-name = "UTYULU-PUTYULU";
             bindings = <
-&trans  &none       &kp KP_N7  &kp KP_N8  &kp KP_N9  &none         &kp F5  &kp F4  &kp F3  &kp F2  &kp F1  &trans
-&trans  &none       &kp KP_N4  &kp KP_N5  &kp KP_N6  &none         &kp F10 &kp F9  &kp F8  &kp F7  &kp F6  &trans
-&trans  &kp KP_N0   &kp KP_N1  &kp KP_N2  &kp KP_N3  &none         &kp F12 &kp F11 &none   &none   &none   &trans
-                               &trans     &trans     &trans        &trans  &trans  &trans
+&trans  &none       &kp KP_N7  &kp KP_N8  &kp KP_N9  &td_aster_bckslh  &kp F5  &kp F4  &kp F3  &kp F2  &kp F1  &trans
+&trans  &none       &kp KP_N4  &kp KP_N5  &kp KP_N6  &td_pm            &kp F10 &kp F9  &kp F8  &kp F7  &kp F6  &trans
+&trans  &kp KP_N0   &kp KP_N1  &kp KP_N2  &kp KP_N3  &td_dt_cm         &kp F12 &kp F11 &none   &none   &none   &trans
+                               &trans     &trans     &trans            &trans  &trans  &trans
             >;
         };
         mirror_num_layer {
