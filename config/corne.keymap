@@ -721,6 +721,22 @@
                 <&macro_release>,
                 <&kp LCTRL>;
         };
+
+        ctrl_shft_k: ctrl_shft_k {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_press>,
+                <&kp LSHIFT>,
+                <&macro_tap>,
+                <&kp K>,
+                <&macro_release>,
+                <&kp LSHIFT>;
+                <&macro_release>,
+                <&kp LCTRL>;
+        };
     };
 
 behaviours {
@@ -1124,7 +1140,7 @@ behaviours {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp k>, <&kp LC(RS(K))>;
+            bindings = <&kp k>, <&ctrl_shft_k>;
         };
 
         td_cshift: tap_dance_cshift {
