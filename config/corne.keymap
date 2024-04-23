@@ -722,8 +722,8 @@
                 <&kp LCTRL>;
         };
     };
-};
-    behaviours {
+
+behaviours {
  // MOD MORPH:
         mod_a: mod_a {
             compatible = "zmk,behavior-mod-morph";
@@ -1290,6 +1290,7 @@
             >;
         };
     };
+};
 };
 
 
