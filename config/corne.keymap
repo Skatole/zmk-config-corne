@@ -1193,6 +1193,7 @@ behaviours {
             bindings = <&mo KIS_CICA>, <&mo ARROW>, <&mo CSETTINGZ>;
         };
     };
+};
 
 
 
@@ -1307,6 +1308,6 @@ behaviours {
         };
     };
 };
-};
+
 
 
