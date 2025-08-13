@@ -1213,7 +1213,7 @@ behaviours {
         
             display-name = "CSALLAP";
             bindings = <
-&kp TAB       &kp Q     &kp W     &e_ht 0 E  &td_ctrl_r     &td_ctrl_t       &kp Y     &td_u     &i_ht 0 I  &td_o    &kp P     &kp BSPC
+&kp TAB       &kp Q     &kp W     &e_ht 0 E  &kp R     &kp T       &kp Y     &td_u     &i_ht 0 I  &td_o    &kp P     &kp BSPC
 &td_shiftalt  &a_ht 0 A  &mod_left &mod_down  &mod_right &kp G            &td_ctrl_h         &td_ctrl_j     &td_ctrl_shift_k    &kp L    &td_sdqt  &td_rshiftORalt
 &td_cshift    &kp Z &kp X     &kp C &kp V &kp B       &td_ctrl_n         &kp M     &kp COMMA  &kp DOT  &kp FSLH  &td_cshift
                                    &td_ag     &tp_lyr1   &kp SPACE   &mt RGUI ENTER &tp_lyr2  &kp RALT
