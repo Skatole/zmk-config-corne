@@ -1223,7 +1223,7 @@ behaviours {
         num_layer {
             display-name = "UTYULU-PUTYULU";
             bindings = <
-&trans  &kp N0    &kp N1  &kp N2  &kp N3  &td_aster_bckslh  &kp F5  &kp F4  &kp F3  &kp F2  &kp F1  &trans
+&trans  &kp KP_N0    &kp N1  &kp N2  &kp N3  &td_aster_bckslh  &kp F5  &kp F4  &kp F3  &kp F2  &kp F1  &trans
 &trans  &none     &kp N4  &kp N5  &kp N6  &td_pm            &kp F10 &kp F9  &kp F8  &kp F7  &kp F6  &trans
 &trans  &none     &kp N7  &kp N8  &kp N9  &td_dt_cm         &kp F12 &kp F11 &none   &none   &none   &trans
                           &trans  &to CSALLAP  &kp LALT            &trans  &trans  &trans
